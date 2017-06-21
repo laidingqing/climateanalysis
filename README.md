@@ -66,16 +66,8 @@
 ### Apache Zeppelin Notebooks
 ![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/10.png)
 
-
-
-### Stanford CoreNLP Sentiment Analysis
-![Stanford CoreNLP Sentiment](http://advancedspark.com/img/corenlp-sentiment.png)
-
-### Jupyter/iPython Notebooks
-![Jupyter/iPython Notebooks](http://advancedspark.com/img/jupyter.png)
-
-### SparkR Notebooks
-![SparkR Notebooks](http://advancedspark.com/img/sparkr.png)
+### Apache Nifi Workflow
+![Apache Nifi Workflow](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/11.png)
 
 ### TensorFlow Notebooks
 ![TensorFlow Notebooks](http://advancedspark.com/img/tensorflow.png)
