@@ -52,70 +52,21 @@
 
 ![REST APIs Architecture](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/6.png)
 
-
-
-
-## Upcoming Workshops
-### Title
-**Building an End-to-End Streaming Analytics and Recommendations Pipeline with Spark, Kafka, and TensorFlow**
-
-### Agenda (Full Day)
-**Part 1 (Analytics and Visualizations)**
-* Analytics and Visualizations Overview (Live Demo!)
-* Verify Environment Setup (Docker, Cloud Instance)
-* Notebooks (Zeppelin, Jupyter/iPython)
-* Interactive Data Analytics (Spark SQL, Hive, Presto)
-* Graph Analytics (Spark, Elastic, NetworkX, TitanDB)
-* Time-series Analytics (Spark, Cassandra)
-* Visualizations (Kibana, Matplotlib, D3)
-* Approximate Queries (Spark SQL, Redis, Algebird)
-* Workflow Management (Airflow)
-
-**Part 2 (Streaming and Recommendations)**
-* Streaming and Recommendations (Live Demo!)
-* Streaming (NiFi, Kafka, Spark Streaming, Flink)
-* Cluster-based Recommendation (Spark ML, Scikit-Learn)
-* Graph-based Recommendation (Spark ML, Spark Graph)
-* Collaborative-based Recommendation (Spark ML)
-* NLP-based Recommendation (CoreNLP, NLTK)
-* Geo-based Recommendation (ElasticSearch)
-* Hybrid On-Premise+Cloud Auto-scale Deploy (Docker)
-* Save Workshop Environment for Your Use Cases
-
-### Locations and Dates
-* San Francisco: Saturday, April 23rd (SOLD OUT)
-* San Francisco: Saturday, June 4th (SOLD OUT)
-* Washington DC: Saturday, June 18th (SOLD OUT)
-* Los Angeles: Sunday, July 10th (SOLD OUT)
-* Seattle: Saturday, July 30th (SOLD OUT)
-* Santa Clara: Saturday, August 6th (SOLD OUT)
-* Chicago: Saturday, August 27th (SOLD OUT)
-* New York: Saturday, October 1st (SOLD OUT)
-* Munich: Saturday, October 15th (SOLD OUT)
-* London: Saturday, October 22nd (SOLD OUT)
-* [Brussels](https://end-to-end-streaming-recommendations-spark-brussel.eventbrite.com?discount=ADVANCEDSPARK25): Saturday, October 29th
-* [Madrid](http://end-to-end-streaming-recommendations-spark-madrid.eventbrite.com/?discount=ADVANCEDSPARK25): Saturday, November 19th
-* [Tokyo](http://end-to-end-streaming-recommendations-spark-tokyo.eventbrite.com?discount=ADVANCEDSPARK25): December 3rd
-* [Shanghai](http://end-to-end-streaming-recommendation-spark-shanghai.eventbrite.com?discount=ADVANCEDSPARK25): December 10th
-* [Beijing](http://end-to-end-streaming-recommendations-spark-beijing.eventbrite.com?discount=ADVANCEDSPARK25): Saturday, December 17th
-* [Hyderabad](http://endtoend-streaming-recommendations-spark-hyderabad.eventbrite.com?discount=ADVANCEDSPARK25): Saturday, December 24th
-* [Bangalore](http://endtoend-streaming-recommendations-spark-bangalore.eventbrite.com?discount=ADVANCEDSPARK25): Saturday, December 31st
-* [Sydney](http://end-to-end-streaming-recommendations-spark-sydney.eventbrite.com?discount=ADVANCEDSPARK25): Saturday, January 7th, 2017
-* [Melbourne](http://endtoend-streaming-recommendations-spark-melbourne.eventbrite.com?discount=ADVANCEDSPARK25): Saturday, January 14th, 2017
-* [Sao Paulo](http://endtoend-streaming-recommendations-spark-sao-paulo.eventbrite.com?discount=ADVANCEDSPARK25): Saturday, February 11th, 2017
-* [Rio de Janeiro](http://endtoend-streaming-recommendations-spark-rio.eventbrite.com?discount=ADVANCEDSPARK25): Saturday, February 18th, 2017
-
-[Suggest a City and Date](http://goo.gl/forms/g9VZ5jAhKdw11SQd2)
-      
-### Description
-The goal of this workshop is to build an end-to-end, streaming data analytics and recommendations pipeline on your local machine using Docker and the latest streaming analytics 
-* First, we create a data pipeline to interactively analyze, approximate, and visualize streaming data using modern tools such as Apache Spark, Kafka, Zeppelin, iPython, and ElasticSearch.
-* Next, we extend our pipeline to use streaming data to generate personalized recommendation models using popular machine learning, graph, and natural language processing techniques such as collaborative filtering, clustering, and topic modeling.
-* Last, we productionize our pipeline and serve live recommendations to our users!
   
 ##  Screenshots
 ### Apache Zeppelin Notebooks
-![Apache Zeppelin Notebooks](http://advancedspark.com/img/zeppelin-notebooks-sm.png)
+![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/7.png)
+
+### Apache Zeppelin Notebooks
+![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/8.png)
+
+### Apache Zeppelin Notebooks
+![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/9.png)
+
+### Apache Zeppelin Notebooks
+![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/10.png)
+
+
 
 ### Stanford CoreNLP Sentiment Analysis
 ![Stanford CoreNLP Sentiment](http://advancedspark.com/img/corenlp-sentiment.png)
