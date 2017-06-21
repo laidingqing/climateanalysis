@@ -23,6 +23,11 @@
 
 # Solution - End to End Batch/Real-time ETL Data Pipeline
 
+## Powered by the BIG DATA STACK
+
+![Framework and Skills Used In The Solution](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/1.png)
+
+
 
 ## Architecture Overview
 **Follow [Wiki](https://github.com/fluxcapacitor/pipeline/wiki) to Setup Docker-based Environment**
