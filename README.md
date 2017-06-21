@@ -44,6 +44,11 @@
 ![Spark Real-time ETL Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/4.png)
 
 
+## Oozie Workflow Overview
+
+![Oozie Workflow Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/5.png)
+
+
 ## Upcoming Workshops
 ### Title
 **Building an End-to-End Streaming Analytics and Recommendations Pipeline with Spark, Kafka, and TensorFlow**
