@@ -1,0 +1,1 @@
+/usr/jdk64/bin/java -jar /root/GmosOnSpring.jar

@@ -1,0 +1,1 @@
+/usr/hdp/2.4.0.0-169/kafka/bin/kafka-console-consumer.sh --zookeeper sandbox.hortonworks.com:2181 --topic gmos_stations --from-beginning

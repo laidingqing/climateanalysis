@@ -1,0 +1,23 @@
+<cluster xmlns='uri:falcon:cluster:0.1' name='gmoscluster' description='' colo='gmosclusterprod'>
+  <interfaces>
+    <interface type='readonly' endpoint='hftp://sandbox.hortonworks.com:50070' version='2.2.0'>
+    </interface>
+    <interface type='write' endpoint='hdfs://sandbox.hortonworks.com:8020' version='2.2.0'>
+    </interface>
+    <interface type='execute' endpoint='sandbox.hortonworks.com:8050' version='2.2.0'>
+    </interface>
+    <interface type='workflow' endpoint='http://sandbox.hortonworks.com:11000/oozie/' version='4.0.0'>
+    </interface>
+    <interface type='messaging' endpoint='tcp://sandbox.hortonworks.com:61616?daemon=true' version='5.1.6'>
+    </interface>
+  </interfaces>
+  <locations>
+    <location name='staging' path='/apps/falcon/gmosluster/staging'>
+    </location>
+    <location name='temp' path=''>
+    </location>
+    <location name='working' path='/apps/falcon/gmosluster/working'>
+    </location>
+  </locations>
+  <ACL owner='admin' group='users' permission='0755'/>
+</cluster>

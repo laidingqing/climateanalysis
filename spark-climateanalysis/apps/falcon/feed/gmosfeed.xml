@@ -1,0 +1,34 @@
+<feed xmlns='uri:falcon:feed:0.1' name='gmosfeed'>
+  <tags>gmosfeed=gmosfeed</tags>
+  <groups>gmosfeedgroup</groups>
+  <frequency>hours(1)</frequency>
+  <timezone>GMT-05:00</timezone>
+  <late-arrival cut-off='hours(1)'/>
+  <clusters>
+    <cluster name='gmoscluster' type='source'>
+      <validity start='2017-06-20T19:18Z' end='2017-08-26T19:18Z'/>
+      <retention limit='hours(90)' action='delete'/>
+      <locations>
+        <location type='data'>
+        </location>
+        <location type='stats'>
+        </location>
+        <location type='meta'>
+        </location>
+      </locations>
+    </cluster>
+  </clusters>
+  <locations>
+    <location type='data' path='/user/ambari-qa/falcon/primary/input/enron/${YEAR}-${MONTH}-${DAY}-${HOUR}'>
+    </location>
+    <location type='stats' path='/tmp/${YEAR}-${MONTH}-${DAY}-${HOUR}'>
+    </location>
+    <location type='meta' path='/tmp/${YEAR}-${MONTH}-${DAY}-${HOUR}'>
+    </location>
+  </locations>
+  <ACL owner='admin' group='users' permission='0755'/>
+  <schema location='./none' provider='/none'/>
+  <properties>
+    <property/>
+  </properties>
+</feed>

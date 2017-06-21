@@ -1,0 +1,1 @@
+/usr/hdp/2.4.0.0-169/kafka/bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic gmos_stations --partitions 1 --replication-factor 1

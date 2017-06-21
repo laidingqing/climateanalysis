@@ -1,0 +1,1 @@
+/usr/hdp/2.4.0.0-169/kafka/bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list sandbox.hortonworks.com:6667 --topic gmos_stations --time -1

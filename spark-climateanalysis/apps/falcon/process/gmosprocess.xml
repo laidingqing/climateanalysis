@@ -1,0 +1,15 @@
+<process xmlns='uri:falcon:process:0.1' name='gmosprocess'>
+  <tags>gmosprocess=gmosprocess</tags>
+  <clusters>
+    <cluster name='gmoscluster'>
+      <validity start='2017-06-20T14:28Z' end='2017-08-26T14:28Z'/>
+    </cluster>
+  </clusters>
+  <parallel>1</parallel>
+  <order>FIFO</order>
+  <frequency>hours(10)</frequency>
+  <timezone>GMT-05:00</timezone>
+  <workflow name='gmosoozieworkflow' engine='oozie' path='/root/oozie/workflow/gmos_workflow.xml'/>
+  <retry policy='exp-backoff' delay='minutes(3)' attempts='3'/>
+  <ACL owner='admin' group='users' permission='0755'/>
+</process>

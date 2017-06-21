@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workflow-app xmlns:sla="uri:oozie:sla:0.2" xmlns="uri:oozie:workflow:0.5" name="GMOS Workflow">
+  <start to="FetchClimateDataSet"/>
+  <kill name="kill">
+    <message>Killed job due to error</message>
+  </kill>
+  <action name="FetchClimateDataSet">
+    <shell xmlns="uri:oozie:shell-action:0.3">
+      <job-tracker>${jobTracker}</job-tracker>
+      <name-node>${nameNode}</name-node>
+      <exec>wgetgmosfile.sh</exec>
+      <file>/root/oozie/scripts/wgetgmosfile.sh#wgetgmosfile.sh</file>
+      <capture-output/>
+    </shell>
+    <ok to="TransforClimateDataSetToHDFS"/>
+    <error to="kill"/>
+  </action>
+  <action name="TransforClimateDataSetToHDFS">
+    <shell xmlns="uri:oozie:shell-action:0.3">
+      <job-tracker>${jobTracker}</job-tracker>
+      <name-node>${nameNode}</name-node>
+      <exec>putgmostohdfs.sh</exec>
+      <file>/root/oozie/scripts/putgmostohdfs.sh#putgmostohdfs.sh</file>
+      <capture-output/>
+    </shell>
+    <ok to="Cleanup"/>
+    <error to="kill"/>
+  </action>
+  <action name="Cleanup">
+    <shell xmlns="uri:oozie:shell-action:0.3">
+      <job-tracker>${jobTracker}</job-tracker>
+      <name-node>${nameNode}</name-node>
+      <exec>cleanuphdfs.sh</exec>
+      <file>/root/oozie/scripts/cleanuphdfs.sh#cleanuphdfs.sh</file>
+      <capture-output/>
+    </shell>
+    <ok to="SparkETL"/>
+    <error to="kill"/>
+  </action>
+  <action name="SparkETL">
+    <shell xmlns="uri:oozie:shell-action:0.3">
+      <job-tracker>${jobTracker}</job-tracker>
+      <name-node>${nameNode}</name-node>
+      <exec>sparketl.sh</exec>
+      <file>/root/oozie/scripts/sparketl.sh#sparketl.sh</file>
+      <capture-output/>
+    </shell>
+    <ok to="end"/>
+    <error to="kill"/>
+  </action>
+  <end name="end"/>
+</workflow-app>
+<!--
+<workflow>
+  <node name="start" x="137" y="14"/>
+  <node name="kill" x="240" y="339"/>
+  <node name="FetchClimateDataSet" x="208" y="114"/>
+  <node name="end" x="701" y="374"/>
+  <node name="TransforClimateDataSetToHDFS" x="421" y="121"/>
+  <node name="Cleanup" x="547" y="266"/>
+  <node name="SparkETL" x="550" y="372"/>
+</workflow>-->

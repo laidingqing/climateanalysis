@@ -1,0 +1,1 @@
+/usr/jdk64/bin/java -jar presto --server localhost:9080 --catalog hive --schema default
