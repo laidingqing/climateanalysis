@@ -69,3 +69,5 @@
 ### Apache Nifi Data Flow
 ![Apache Nifi Data Flow](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/11.png)
 
+### Spark, Spark Streaming, and Spark SQL Admin UIs
+![Spark Admin UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/12.png)
