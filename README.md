@@ -36,8 +36,6 @@
 ## Mapped to Code
 ![Workshop Architecture Overview](http://advancedspark.com/img/architecture-overview-mapped-to-code-768x563.png)
 
-## Powered by the PANCAKE STACK!
-![PANCAKE STACK](http://advancedspark.com/img/pancake-stack-sign-sm.png)
 
 ## Upcoming Workshops
 ### Title
