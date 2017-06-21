@@ -34,9 +34,14 @@
 ![Pipeline Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/2.png)
 
 
-## Mapped to Code
-![Workshop Architecture Overview](http://advancedspark.com/img/architecture-overview-mapped-to-code-768x563.png)
+## Spark Batch ETL Architecture Overview
 
+![Spark Batch ETL Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/3.png)
+
+
+## Spark Batch ETL Architecture Overview
+
+![Spark Batch ETL Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/3.png)
 
 ## Upcoming Workshops
 ### Title
