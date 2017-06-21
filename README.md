@@ -21,7 +21,7 @@
 6.  **Bonus 4:** Define a metric that represents change in global temperature and/or precipitation over time, and visualize it on a heatmap.
 
 
-# End-to-End Solution, Batch/Real-time ETL Data Pipeline
+# Solution - End to End Batch/Real-time ETL Data Pipeline
 
 
 ## Architecture Overview
