@@ -56,14 +56,8 @@
 ##  Screenshots
 ### Apache Zeppelin Notebooks
 ![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/7.png)
-
-### Apache Zeppelin Notebooks
 ![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/8.png)
-
-### Apache Zeppelin Notebooks
 ![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/9.png)
-
-### Apache Zeppelin Notebooks
 ![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/10.png)
 
 ### Apache Nifi Data Flow
@@ -71,3 +65,10 @@
 
 ### Spark, Spark Streaming, and Spark SQL Admin UIs
 ![Spark Admin UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/12.png)
+
+### Falcon Data Management UIs
+![Falcon Data Management UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/13.png)
+![Falcon Data Management UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/14.png)
+![Falcon Data Management UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/15.png)
+![Falcon Data Management UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/16.png)
+
