@@ -28,7 +28,6 @@
 ![Framework and Skills Used In The Solution](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/1.png)
 
 
-
 ## Pipeline Architecture Overview
 
 ![Pipeline Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/2.png)
@@ -47,6 +46,13 @@
 ## Oozie Workflow Overview
 
 ![Oozie Workflow Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/5.png)
+
+
+## REST APIs Architecture
+
+![REST APIs Architecture](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/6.png)
+
+
 
 
 ## Upcoming Workshops
