@@ -29,9 +29,10 @@
 
 
 
-## Architecture Overview
-**Follow [Wiki](https://github.com/fluxcapacitor/pipeline/wiki) to Setup Docker-based Environment**
-![Pipeline Architecture Overview](http://advancedspark.com/img/architecture-overview-768x563.png)
+## Pipeline Architecture Overview
+
+![Pipeline Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/2.png)
+
 
 ## Mapped to Code
 ![Workshop Architecture Overview](http://advancedspark.com/img/architecture-overview-mapped-to-code-768x563.png)
