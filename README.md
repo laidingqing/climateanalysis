@@ -39,9 +39,10 @@
 ![Spark Batch ETL Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/3.png)
 
 
-## Spark Batch ETL Architecture Overview
+## Spark Real-time ETL Architecture Overview
 
-![Spark Batch ETL Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/3.png)
+![Spark Real-time ETL Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/4.png)
+
 
 ## Upcoming Workshops
 ### Title
