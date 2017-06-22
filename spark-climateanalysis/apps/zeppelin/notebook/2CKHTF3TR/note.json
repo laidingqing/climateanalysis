@@ -106,13 +106,13 @@
     },
     {
       "text": "%sql select year, cast (sum(case when length(gtavg) \u003d 0 then 0.0 else cast(gtavg as double) end)/sum(case when length(gtavg) \u003d 0 then 0 else 1 end) as decimal(10,2)) as tavg from gmos_parquet where length(gtavg) !\u003d 0 group by year order by year",
-      "dateUpdated": "Jun 20, 2017 4:17:45 AM",
+      "dateUpdated": "Jun 20, 2017 4:13:35 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
           "mode": "stackedAreaChart",
           "height": 300.0,
-          "optionOpen": false,
+          "optionOpen": true,
           "keys": [
             {
               "name": "year",
@@ -293,14 +293,48 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "config": {},
+      "text": "%cassandra\n\nuse sparkgmos;select * from gmos_report where year\u003d\u00272002\u0027 limit 20;",
+      "dateUpdated": "Jun 22, 2017 3:09:39 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
       "settings": {
         "params": {},
         "forms": {}
       },
       "jobName": "paragraph_1497933854132_-1966727152",
       "id": "20170620-044414_1006596254",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "year\tlatitude_left\tlatitude_right\tlongitude_left\tlongitude_right\tseason\tavailable_tavg\taverage_tempeture\n2002\t-79\t-78\t106\t107\tfall\t0\tnull\n2002\t-79\t-78\t106\t107\twinter\t0\tnull\n2002\t-78\t-77\t-35\t-34\twinter\t0\tnull\n2002\t-78\t-77\t166\t167\tfall\t1\t-22.38\n2002\t-76\t-75\t-27\t-26\tfall\t0\tnull\n2002\t-76\t-75\t-27\t-26\tspring\t1\t-23.29\n2002\t-76\t-75\t-27\t-26\twinter\t0\tnull\n2002\t-72\t-71\t-3\t-2\tfall\t3\t-17.213333333333335\n2002\t-72\t-71\t-3\t-2\tspring\t3\t-14.983333333333334\n2002\t-72\t-71\t-3\t-2\tsummer\t2\t-20.674999999999997\n2002\t-71\t-70\t-9\t-8\twinter\t1\t-3.47\n2002\t-71\t-70\t11\t12\tfall\t0\tnull\n2002\t-71\t-70\t11\t12\tspring\t1\t-7.77\n2002\t-71\t-70\t11\t12\twinter\t2\t-2.185\n2002\t-69\t-68\t-68\t-67\tfall\t0\tnull\n2002\t-69\t-68\t-68\t-67\tspring\t0\tnull\n2002\t-69\t-68\t-68\t-67\twinter\t0\tnull\n2002\t-69\t-68\t39\t40\tfall\t1\t-7.29\n2002\t-69\t-68\t39\t40\tspring\t0\tnull\n2002\t-69\t-68\t39\t40\twinter\t0\tnull\n"
+      },
       "dateCreated": "Jun 20, 2017 4:44:14 AM",
+      "dateStarted": "Jun 22, 2017 3:09:39 PM",
+      "dateFinished": "Jun 22, 2017 3:09:40 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1498143895994_-1704839671",
+      "id": "20170622-150455_1116892468",
+      "dateCreated": "Jun 22, 2017 3:04:55 PM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }

@@ -1,1 +1,1 @@
-cqlsh 10.0.2.15
+cqlsh --request-timeout 120 10.0.2.15
