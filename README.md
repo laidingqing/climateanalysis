@@ -81,7 +81,7 @@
 ### Falcon Data Management UIs - Feed Configuration
 ![Falcon Data Management UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/14.png)
 
-### Falcon Data Management UIs - Process
+### Falcon Data Management UIs - Process Configuration
 ![Falcon Data Management UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/15.png)
 
 ### Falcon Data Management UIs - Process Running Status
