@@ -29,8 +29,8 @@ object SparkETLMainStarter {
     // It will take about 2 minutes running at my local sandbox
     // The file size will reduce from to 9G to 7G
 
-    // Will uncomment after test
-    // GmosGzSplittable.transform(sc)
+    // Will uncomment out after test
+    GmosGzSplittable.transform(sc)
 
     // To do
     // Another way to split the gz file is to create custom input format
@@ -39,10 +39,10 @@ object SparkETLMainStarter {
     // Read the raw gmos file, which will be splittable into about 50 partitions
     // input path: /root/gmos/income
 
-    // Will uncomment after test
-    //val rawGmosRdd = ReadGmosRaw.action(sc)
+    // Will uncomment out after test
+    val rawGmosRdd = ReadGmosRaw.action(sc)
 
-    //Should be uncommnent in order to cahce RDD
+    //Should be uncommnent out in order to cahce RDD
     //But since my local sandbox has limited memory, it doesn't make sense to cache because the linage is always recomputed
     //Also bring up some lock issue since the broadcast is waiting there forever
     //rawGmosRdd.cache()
@@ -52,14 +52,14 @@ object SparkETLMainStarter {
 
     // Generate full schema based on the header of all csv files and merge them together
 
-    // Will uncomment after test
-    //val tFullSchema = FullSchemaGenerator.createSchema(rawGmosRdd)
+    // Will uncomment out after test
+    val tFullSchema = FullSchemaGenerator.createSchema(rawGmosRdd)
 
     // Generate station schema based on the header of each station csv file
     // This process will take 2 or 3 minutes at my local sandbox
 
-    // Will uncomment after test
-    //val schemaPerStation:scala.collection.Map[String, Map[Int,Int]] = StationSchemaCollector.createSchema(sc, rawGmosRdd, tFullSchema)
+    // Will uncomment out after test
+    val schemaPerStation:scala.collection.Map[String, Map[Int,Int]] = StationSchemaCollector.createSchema(sc, rawGmosRdd, tFullSchema)
 
 
     // To do
@@ -70,16 +70,16 @@ object SparkETLMainStarter {
 
     // Broadcast full schema and schema for station collections to the executors
 
-    // Will uncomment after test
-    //val broadcastVar = sc.broadcast(schemaPerStation)
-    //val fullschemaVar = sc.broadcast(tFullSchema._2)
+    // Will uncomment out after test
+    val broadcastVar = sc.broadcast(schemaPerStation)
+    val fullschemaVar = sc.broadcast(tFullSchema._2)
 
     // Save raw dataset as parquet file with full schema
     // Destination folder: /root/gmos/etl/gmos_raw.parquet
     // This transformation will take one hour or so at my local sandbox
 
-    // Will uncomment after test
-    //RawDatasetToParquetTransformer.transform(sqlContext, rawGmosRdd, broadcastVar, fullschemaVar, tFullSchema._1)
+    // Will uncomment out after test
+    RawDatasetToParquetTransformer.transform(sqlContext, rawGmosRdd, broadcastVar, fullschemaVar, tFullSchema._1)
 
     // Save raw dataset as avro file with full schema
     // The performance is much worse than parquet
@@ -88,8 +88,8 @@ object SparkETLMainStarter {
 
     // Enrichment of Raw Parquet File
     // This will take about one hour or so at my local sandbox
-    // Will uncomment after test
-    //RawParquetEnrichment.transform(sqlContext)
+    // Will uncomment out after test
+    RawParquetEnrichment.transform(sqlContext)
 
     // Enrichment of Raw Parquet File With Partition
     // Comment out because this process is pretty slow at my local sandbox
@@ -97,13 +97,19 @@ object SparkETLMainStarter {
 
     // Create External Hive Table
     // Location /root/gmos/etl/gmos_enrich.parquet
-    // Will uncomment after test
-    //HiveTableAsParquetCreator.transform(sqlContext)
+    // Will uncomment out after test
+    HiveTableAsParquetCreator.transform(sqlContext)
 
-    // Will uncomment after test
-    //ReportGenerator.action(sqlContext)
+    // Generate the report
+    // Will uncomment out after test
+    ReportGenerator.action(sqlContext)
+
+    // Persist the report to Cassandra
+    // Will uncomment out after test
+    ReportToCassandra.action(sqlContext)
 
     // Output station and geo mapping dataset into my sql as reference table
+    // Will uncomment out after test
     StationGeoMapper.action(sqlContext)
 
     }
