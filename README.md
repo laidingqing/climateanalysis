@@ -90,7 +90,7 @@
 ### Oozie Server Monitoring UIs - ETL Actions
 ![Oozie Server Monitoring UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/17.png)
 
-### Oozie Server Monitoring UIs - Wrokflow
+### Oozie Server Monitoring UIs - Workflow
 ![Oozie Server Monitoring UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/18.png)
 
 ### Spring Boot Console
