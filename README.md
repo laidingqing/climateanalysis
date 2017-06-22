@@ -89,4 +89,4 @@
 ![Hive Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/22.png)
 
 ### Redis Queries
-![Redis Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/21.png)
+![Redis Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/23.png)
