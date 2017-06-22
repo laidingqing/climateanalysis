@@ -79,3 +79,14 @@
 ### Spring Boot Console
 ![Spring Boot Console](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/19.png)
 
+### Presto Queries
+![Presto Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/20.png)
+
+### Spark SQL Queries
+![spark SQL Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/21.png)
+
+### Hive Queries
+![Hive Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/22.png)
+
+### Redis Queries
+![Redis Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/21.png)
