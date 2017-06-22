@@ -75,7 +75,7 @@
 ### Spark Streaming Driver Console
 ![Spark Driver Console](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/24.png)
 
-### Falcon Data Management UIs - Feed Configuration
+### Falcon Data Management UIs - ClusterConfiguration
 ![Falcon Data Management UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/13.png)
 
 ### Falcon Data Management UIs - Feed Configuration
