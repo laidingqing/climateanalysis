@@ -96,3 +96,6 @@
 ### Kafka Message Consumer
 ![Kafka Message Consumer](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/25.png)
 
+### REST API via Spark Thrift Server
+![Kafka Message Consumer](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/27.png)
+
