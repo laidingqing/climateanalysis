@@ -72,3 +72,6 @@
 ![Falcon Data Management UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/15.png)
 ![Falcon Data Management UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/16.png)
 
+### Oozie Server Monitoring UIs
+![Oozie Server Monitoring UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/17.png)
+
