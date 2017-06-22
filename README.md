@@ -54,10 +54,16 @@
 
   
 ##  Screenshots
-### Apache Zeppelin Notebooks
+### Apache Zeppelin Notebooks via Spark SQL, Datamap and Java Script
 ![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/7.png)
+
+### Apache Zeppelin Notebooks via Spark SQL and Hive Query
 ![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/8.png)
+
+### Apache Zeppelin Notebooks via Spark SQL and Hive Query
 ![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/9.png)
+
+### Apache Zeppelin Notebooks via Spark SQL and Hive Query
 ![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/10.png)
 
 ### Apache Nifi Data Flow
@@ -81,19 +87,19 @@
 ![Spring Boot Console](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/19.png)
 ![Spring Boot Console](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/26.png)
 
-### Presto Queries
+### Presto Queries via CLI
 ![Presto Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/20.png)
 
-### Spark SQL Queries
+### Spark SQL Queries via Spark Shell
 ![spark SQL Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/21.png)
 
-### Hive Queries
+### Hive Queries via Hive CLI
 ![Hive Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/22.png)
 
-### Redis Queries
+### Redis Queries via Redis Client CLI
 ![Redis Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/23.png)
 
-### Kafka Message Consumer
+### Kafka Message Consumer via Kafka Console
 ![Kafka Message Consumer](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/25.png)
 
 ### REST API via Spark Thrift Server
