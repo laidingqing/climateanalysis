@@ -67,9 +67,21 @@
     </dependency>
 
     <dependency>
+      <groupId>com.datastax.spark</groupId>
+      <artifactId>spark-cassandra-connector_2.10</artifactId>
+      <version>1.6.0</version>
+    </dependency>
+
+    <dependency>
       <groupId>redis.clients</groupId>
       <artifactId>jedis</artifactId>
       <version>2.7.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.elasticsearch</groupId>
+      <artifactId>elasticsearch-spark_2.10</artifactId>
+      <version>2.4.2</version>
     </dependency>
 
     <dependency>

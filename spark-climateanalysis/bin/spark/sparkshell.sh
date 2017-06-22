@@ -1,1 +1,1 @@
-spark-shell --packages com.databricks:spark-avro_2.10:2.0.1,RedisLabs:spark-redis:0.3.2 --driver-memory 2G --executor-memory 3G --executor-cores 8
+spark-shell --packages com.databricks:spark-avro_2.10:2.0.1,RedisLabs:spark-redis:0.3.2,org.elasticsearch:elasticsearch-spark_2.10:2.4.2 --driver-memory 2G --executor-memory 3G --executor-cores 8 
