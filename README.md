@@ -111,6 +111,9 @@
 ### Redis Queries via Redis Client CLI
 ![Redis Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/23.png)
 
+### Cassandra Queries via CQLSH
+![Cassandra Queries via CQLSH](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/30.png)
+
 ### Kafka Message Consumer via Kafka Console
 ![Kafka Message Consumer](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/25.png)
 
