@@ -71,7 +71,9 @@
 
 ### Spark, Spark Streaming, and Spark SQL Admin UIs
 ![Spark Admin UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/12.png)
-![Spark Streaming Console](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/24.png)
+
+### Spark Streaming Driver Console
+![Spark Driver Console](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/24.png)
 
 ### Falcon Data Management UIs
 ![Falcon Data Management UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/13.png)
@@ -85,6 +87,8 @@
 
 ### Spring Boot Console
 ![Spring Boot Console](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/19.png)
+
+### Intellij IDE for Spring Boot, Spring MVC and REST Template
 ![Spring Boot Console](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/26.png)
 
 ### Presto Queries via CLI
