@@ -66,6 +66,9 @@
 ### Apache Zeppelin Notebooks via Spark SQL and Hive Query
 ![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/10.png)
 
+### Apache Zeppelin Notebooks - Report via Cassandra Query
+![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/31.png)
+
 ### Apache Nifi Data Flow
 ![Apache Nifi Data Flow](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/11.png)
 
