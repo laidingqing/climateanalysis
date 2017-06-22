@@ -65,6 +65,7 @@
 
 ### Spark, Spark Streaming, and Spark SQL Admin UIs
 ![Spark Admin UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/12.png)
+![Spark Streaming Console](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/24.png)
 
 ### Falcon Data Management UIs
 ![Falcon Data Management UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/13.png)
@@ -78,6 +79,7 @@
 
 ### Spring Boot Console
 ![Spring Boot Console](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/19.png)
+![Spring Boot Console](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/26.png)
 
 ### Presto Queries
 ![Presto Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/20.png)
@@ -90,3 +92,7 @@
 
 ### Redis Queries
 ![Redis Queries](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/23.png)
+
+### Kafka Message Consumer
+![Kafka Message Consumer](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/25.png)
+
