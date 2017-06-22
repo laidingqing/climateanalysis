@@ -74,4 +74,8 @@
 
 ### Oozie Server Monitoring UIs
 ![Oozie Server Monitoring UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/17.png)
+![Oozie Server Monitoring UI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/18.png)
+
+### Spring Boot Console
+![Spring Boot Console](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/19.png)
 
