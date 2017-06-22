@@ -97,5 +97,7 @@
 ![Kafka Message Consumer](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/25.png)
 
 ### REST API via Spark Thrift Server
-![Kafka Message Consumer](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/27.png)
+![REST API via Spark Thrift Server](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/27.png)
 
+### Dataset Schema Merged by Spark ETL
+![Dataset Schema Merged by Spark ETL](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/28.png)
