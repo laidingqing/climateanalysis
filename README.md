@@ -27,7 +27,7 @@
 
 ![Framework and Skills Used In The Solution](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/1.png)
 
-## Frameworks and skills used in the Solution
+## Frameworks and skills used in the solution
 
 ![Framework and Skills Used In The Solution](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/35.png)
 
