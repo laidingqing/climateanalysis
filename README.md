@@ -134,3 +134,6 @@
 
 ### Kibana Visualization Dashboard UIs
 ![Kibana Visualization Dashboard UIs](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/33.png)
+
+### Kibana Visualization Dashboard UIs
+![Kibana Visualization Dashboard UIs](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/34.png)
