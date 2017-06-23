@@ -22,7 +22,7 @@ object SparkETLToELK {
     dfparquet.filter(dfparquet("gtavg").isNotNull).registerTempTable("gmos_enrich")
     sqlContext.udf.register("toString", (d: Double) => String.valueOf(d))
     sqlContext.udf.register("toDouble", (s: String) => s.toDouble)
-    val df = sqlContext.sql("select a.gstation as station, b.country, a.gdate as date, a.year, a.season, toString(a.glatitude) as latitude, toString(a.glongitude) as longitude, toDouble(a.gtavg) as tavg  from gmos_enrich a left join gmos_lookup b on a.gstation = b.station where length(a.gtavg) > 0")
+    val df = sqlContext.sql("select a.gstation as station, b.country, a.gdate as date, a.year, a.season, toString(a.glatitude) as latitude, toString(a.glongitude) as longitude, toDouble(a.gtavg) as tavg  from gmos_enrich a left join gmos_lookup b on a.gstation = b.station where length(a.gtavg) > 0 and a.glatitude is not null and a.glongitude is not null")
     df.write.format("org.elasticsearch.spark.sql").mode(SaveMode.Overwrite).options(esConfig).save("sparkgmos/gmos_metrics")
   }
 }
