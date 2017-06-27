@@ -1,0 +1,5 @@
+create 'climate_data',
+  { NAME => 'climate', VERSIONS => 1, COMPRESSION => 'SNAPPY', DATA_BLOCK_ENCODING => 'FAST_DIFF'},
+  {SPLITS => [
+    '01','02','03', '04', '05'
+  ]}

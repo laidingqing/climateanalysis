@@ -1,0 +1,7 @@
+#Print out HFile Content
+hbase hfile -e -m -f /tmp/climate_data/hfiles/climate/b29984c33c6f4f408773dec0dcb1eb9a
+
+#Bulk Load
+hbase org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles -Dcreate.table=no /tmp/climate_data/hfiles climate_data
+
+ 
