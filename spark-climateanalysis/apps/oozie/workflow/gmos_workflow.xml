@@ -57,6 +57,17 @@
       <file>/root/oozie/scripts/sparketltoelk.sh#sparketltoelk.sh</file>
       <capture-output/>
     </shell>
+    <ok to="SparkETLToHBase"/>
+    <error to="kill"/>
+  </action>
+    <action name="SparkETLToHBase">
+    <shell xmlns="uri:oozie:shell-action:0.3">
+      <job-tracker>${jobTracker}</job-tracker>
+      <name-node>${nameNode}</name-node>
+      <exec>sparketltohbase.sh</exec>
+      <file>/root/oozie/scripts/sparketltohbase.sh#sparketltohbase.sh</file>
+      <capture-output/>
+    </shell>
     <ok to="end"/>
     <error to="kill"/>
   </action>
