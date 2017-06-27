@@ -121,6 +121,9 @@
 ### Cassandra Queries via CQLSH
 ![Cassandra Queries via CQLSH](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/30.png)
 
+### HBase Queries via HBase Shell
+![HBase Queries via HBase Shell](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/37.png)
+
 ### Kafka Message Consumer via Kafka Console
 ![Kafka Message Consumer](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/25.png)
 
