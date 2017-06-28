@@ -1,0 +1,1 @@
+/usr/hdp/2.4.0.0-169/phoenix/bin/sqlline.py localhost:2181

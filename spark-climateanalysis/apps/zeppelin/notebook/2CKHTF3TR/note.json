@@ -327,14 +327,48 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "config": {},
+      "text": "%phoenix\n\nselect id, \"climate\".\"c1\" as station, \"climate\".\"c2\" as country, \"climate\".\"c3\" as date, \"climate\".\"c4\" as year, \"climate\".\"c5\" as season, \"climate\".\"c6\" as latitude, \"climate\".\"c7\" as longitude, \"climate\".\"c8\" as average from \"climate_data\" limit 10",
+      "dateUpdated": "Jun 28, 2017 2:04:09 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
       "settings": {
         "params": {},
         "forms": {}
       },
       "jobName": "paragraph_1498143895994_-1704839671",
       "id": "20170622-150455_1116892468",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "ID\tSTATION\tCOUNTRY\tDATE\tYEAR\tSEASON\tLATITUDE\tLONGITUDE\tAVERAGE\n0:AGE00135039:1852-01\tAGE00135039\tnull\t1852-01\t1852\twinter\t35.7297\t0.65\t-0.411875\n0:AGE00135039:1852-03\tAGE00135039\tnull\t1852-03\t1852\tspring\t35.7297\t0.65\t-0.345625\n0:AGE00135039:1852-04\tAGE00135039\tnull\t1852-04\t1852\tspring\t35.7297\t0.65\t-0.2678125\n0:AGE00135039:1852-06\tAGE00135039\tnull\t1852-06\t1852\tsummer\t35.7297\t0.65\t-0.205234375\n0:AGE00135039:1852-07\tAGE00135039\tnull\t1852-07\t1852\tsummer\t35.7297\t0.65\t-0.188359375\n0:AGE00135039:1852-08\tAGE00135039\tnull\t1852-08\t1852\tsummer\t35.7297\t0.65\t-0.184375\n0:AGE00135039:1852-09\tAGE00135039\tnull\t1852-09\t1852\tfall\t35.7297\t0.65\t-0.1996875\n0:AGE00135039:1852-10\tAGE00135039\tnull\t1852-10\t1852\tfall\t35.7297\t0.65\t-0.2240625\n0:AGE00135039:1852-11\tAGE00135039\tnull\t1852-11\t1852\tfall\t35.7297\t0.65\t-0.243828125\n0:AGE00135039:1852-12\tAGE00135039\tnull\t1852-12\t1852\twinter\t35.7297\t0.65\t-0.3571875\n"
+      },
       "dateCreated": "Jun 22, 2017 3:04:55 PM",
+      "dateStarted": "Jun 28, 2017 2:04:10 PM",
+      "dateFinished": "Jun 28, 2017 2:04:12 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1498658607009_1833421837",
+      "id": "20170628-140327_162437960",
+      "dateCreated": "Jun 28, 2017 2:03:27 PM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }

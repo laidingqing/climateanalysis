@@ -1,0 +1,1 @@
+select id, "climate"."c1" as station, "climate"."c2" as country, "climate"."c3" as date, "climate"."c4" as year, "climate"."c5" as season, "climate"."c6" as latitude, "climate"."c7" as longitude, "climate"."c8" as average from "climate_data" limit 10;
