@@ -81,6 +81,9 @@
 ### Apache Zeppelin Notebooks - Report via Cassandra Query
 ![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/31.png)
 
+### Apache Zeppelin Notebooks - HBase Query via Apache Phoenix
+![Apache Zeppelin Notebooks](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/42.png)
+
 ### Apache Nifi Data Flow
 ![Apache Nifi Data Flow](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/11.png)
 
@@ -131,6 +134,9 @@
 
 ### HBase Queries via HBase Shell
 ![HBase Queries via HBase Shell](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/37.png)
+
+### Phoenix Queries via CLI
+![Phoenix Queries via CLI](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/41.png)
 
 ### Kafka Message Consumer via Kafka Console
 ![Kafka Message Consumer](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/25.png)
