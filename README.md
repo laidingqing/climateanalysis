@@ -46,6 +46,14 @@
 
 ![Spark Real-time ETL Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/4.png)
 
+## Spark ETL to HBase Architecture Overview
+
+![Spark ETL to HBase Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/38.png)
+
+## Spark ETL to ElasticSearch Architecture Overview
+
+![Spark ETL to ElasticSearch Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/39.png)
+
 
 ## Oozie Workflow Overview
 
