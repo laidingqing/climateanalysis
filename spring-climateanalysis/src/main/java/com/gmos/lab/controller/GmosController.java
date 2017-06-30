@@ -4,20 +4,24 @@ import com.gmos.lab.access.JdbcHive;
 import com.gmos.lab.access.JdbcMySQL;
 import com.gmos.lab.access.JdbcPresto;
 import com.gmos.lab.access.JdbcSpark;
+import com.gmos.lab.access.ClientHBase;
 import com.gmos.lab.model.ClimateAnalysis;
 import com.gmos.lab.model.Station;
+import com.gmos.lab.search.SearchService;
 import com.gmos.lab.util.AddressParser;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-
+import java.io.IOException;
 import java.util.*;
 
 @RestController
 public class GmosController {
+
+    @Autowired
+    private SearchService searchService;
 
     @RequestMapping("/searchbygeo")
     public ClimateAnalysis[] searchByGeo(@RequestParam(value="latitude") String latitude,
@@ -35,6 +39,10 @@ public class GmosController {
             rets = JdbcSpark.query(dlatitude, dlongitude);
         }else if(datasource.equalsIgnoreCase("presto")){
             rets = JdbcPresto.query(dlatitude, dlongitude);
+        }else if(datasource.equalsIgnoreCase("hbase")){
+            try {
+                rets = ClientHBase.query(searchService, latitude, longitude);
+            }catch(IOException e){e.printStackTrace();}
         }
 
         return rets.toArray(new ClimateAnalysis[0]);

@@ -2,8 +2,16 @@ package com.gmos.lab.model;
 
 public class ClimateAnalysis implements java.io.Serializable{
 
-    private final double tempeature;
-    private final long datapoints;
+    public void setTempeature(double tempeature) {
+        this.tempeature = tempeature;
+    }
+
+    public void setDatapoints(long datapoints) {
+        this.datapoints = datapoints;
+    }
+
+    private double tempeature;
+    private long datapoints;
     private final String year;
     private final String season;
 
