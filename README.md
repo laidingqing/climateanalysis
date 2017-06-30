@@ -54,6 +54,11 @@
 
 ![Spark ETL to ElasticSearch Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/38.png)
 
+## Implementation of Low Latency Query (200ms) Over Big Data
+
+![Implementation of Low Latency Query
+rch Ar](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/43.png)
+
 
 ## Oozie Workflow Overview
 
