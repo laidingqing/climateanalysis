@@ -42,7 +42,7 @@
 ![Spark Batch ETL Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/3.png)
 
 
-## Spark Machine Learning Model Training for Prediction Global Weather
+## Spark Machine Learning Model Training for Prediction of Global Weather
 
 ![Spark ML Model Training Architecture Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/44.png)
 
