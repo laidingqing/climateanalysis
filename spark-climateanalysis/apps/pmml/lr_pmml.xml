@@ -1,0 +1,28 @@
+<PMML xmlns="http://www.dmg.org/PMML-4_2" version="4.2">                                                                                             
+        <Header>                                                                                                                                     
+                <Application/>                                                                                                                       
+                <Timestamp>2017-07-08T18:25:30Z</Timestamp>                                                                                          
+        </Header>                                                                                                                                    
+        <DataDictionary>                                                                                                                             
+                <DataField name="latitude" optype="continuous" dataType="double"/>                                                                   
+                <DataField name="longitude" optype="continuous" dataType="double"/>                                                                  
+                <DataField name="year" optype="continuous" dataType="double"/>                                                                       
+                <DataField name="month" optype="continuous" dataType="double"/>                                                                      
+                <DataField name="label" optype="continuous" dataType="double"/>                                                                      
+        </DataDictionary>                                                                                                                            
+        <RegressionModel functionName="regression">                                                                                                  
+                <MiningSchema>                                                                                                                       
+                        <MiningField name="label" usageType="target"/>                                                                               
+                        <MiningField name="latitude"/>                                                                                               
+                        <MiningField name="longitude"/>                                                                                              
+                        <MiningField name="year"/>                                                                                                   
+                        <MiningField name="month"/>                                                                                                  
+                </MiningSchema>                                                                                                                      
+                <RegressionTable intercept="25.00496707955744">                                                                                      
+                        <NumericPredictor name="latitude" coefficient="-0.26968675686021604"/>                                                       
+                        <NumericPredictor name="longitude" coefficient="-0.02272734194203726"/>                                                      
+                        <NumericPredictor name="year" coefficient="-0.0047989482386111915"/>                                                         
+                        <NumericPredictor name="month" coefficient="0.5740960913376715"/>                                                            
+                </RegressionTable>                                                                                                                   
+        </RegressionModel>                 
+</PMML>		
