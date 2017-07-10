@@ -1,6 +1,6 @@
 package com.gmos.lab.ml
 
-import com.gmos.lab.ml.regression.{LinearRegressionPL, LinearRegressionWithSGD}
+import com.gmos.lab.ml.regression.{DecisionTreePL, LinearRegressionPL, LinearRegressionWithSGD}
 import com.gmos.lab.ml.util.MLUtils
 import org.apache.spark.mllib.linalg.Vector
 import org.apache.spark.mllib.regression.LabeledPoint
@@ -22,11 +22,18 @@ object SparkMLTrainer {
     lrWithSGD.execute()
     */
 
-    // Linear Regression Using ML Pipeline
+    /* Linear Regression Using ML Pipeline
     val rdd = MLUtils.loadGmosParquetAsDF(sqlContext, "/root/gmos/etl/gmos_enrich.parquet")
     rdd.cache()
     val lrpl = new LinearRegressionPL(sqlContext, rdd, rdd)
     lrpl.execute()
+    */
+
+    // Decision Tree Regression Using ML Pipeline
+    val rdd = MLUtils.loadGmosParquetAsDF(sqlContext, "/root/gmos/etl/gmos_enrich.parquet")
+    rdd.cache()
+    val dtpl = new DecisionTreePL(sqlContext, rdd, rdd)
+    dtpl.execute()
 
   }
 
