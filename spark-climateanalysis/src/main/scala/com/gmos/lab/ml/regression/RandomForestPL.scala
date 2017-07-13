@@ -49,6 +49,7 @@ class RandomForestPL (val sqlContext: SQLContext, val trainRdd: RDD[(Double, Dou
         .setMetricName("rmse")
 
       val paramGrid = new ParamGridBuilder()
+       .addGrid(rf.numTrees, Array(5, 10))
        .addGrid(rf.maxBins, Array(32))
        .addGrid(rf.maxDepth, Array(5, 10))
        .build()
