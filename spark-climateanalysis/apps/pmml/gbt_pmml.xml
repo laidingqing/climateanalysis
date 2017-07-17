@@ -1,0 +1,4014 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_2" version="4.2">
+	<Header>
+		<Application/>
+		<Timestamp>2017-07-15T22:22:20Z</Timestamp>
+	</Header>
+	<DataDictionary>
+		<DataField name="latitude" optype="continuous" dataType="double"/>
+		<DataField name="longitude" optype="continuous" dataType="double"/>
+		<DataField name="year" optype="continuous" dataType="double"/>
+		<DataField name="month" optype="continuous" dataType="double"/>
+		<DataField name="label" optype="continuous" dataType="double"/>
+	</DataDictionary>
+	<MiningModel functionName="regression">
+		<MiningSchema>
+			<MiningField name="label" usageType="target"/>
+			<MiningField name="latitude"/>
+			<MiningField name="longitude"/>
+			<MiningField name="year"/>
+			<MiningField name="month"/>
+		</MiningSchema>
+		<Segmentation multipleModelMethod="sum">
+			<Segment id="1">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="10.24662413612783">
+						<True/>
+						<Node score="1.43582114466641">
+							<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+							<Node score="12.611955872023852">
+								<SimplePredicate field="latitude" operator="lessOrEqual" value="37.2571"/>
+								<Node score="21.983066240701657">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="28.0372"/>
+									<Node score="23.41330312082194">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="15.38"/>
+										<Node score="20.232012761576414">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="-30.0236"/>
+										</Node>
+										<Node score="26.633842014688405">
+											<SimplePredicate field="latitude" operator="greaterThan" value="-30.0236"/>
+										</Node>
+									</Node>
+									<Node score="19.297646293888153">
+										<SimplePredicate field="latitude" operator="greaterThan" value="15.38"/>
+										<Node score="18.4880787398899">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="20.90818848663084">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="8.51916050971811">
+									<SimplePredicate field="latitude" operator="greaterThan" value="28.0372"/>
+									<Node score="11.278863169609794">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="33.7"/>
+										<Node score="9.803715835480526">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="14.206982063262558">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+									<Node score="6.448322358539312">
+										<SimplePredicate field="latitude" operator="greaterThan" value="33.7"/>
+										<Node score="4.873550968847984">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="9.586496327396627">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-3.6061794544864694">
+								<SimplePredicate field="latitude" operator="greaterThan" value="37.2571"/>
+								<Node score="-1.8070743217628813">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="50.1"/>
+									<Node score="-3.686595133908779">
+										<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										<Node score="2.9272748326182803">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-117.8"/>
+										</Node>
+										<Node score="-4.768008502912181">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-117.8"/>
+										</Node>
+									</Node>
+									<Node score="1.9342844625137297">
+										<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										<Node score="5.082542002198911">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="41.38333"/>
+										</Node>
+										<Node score="0.24364510528566566">
+											<SimplePredicate field="latitude" operator="greaterThan" value="41.38333"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-9.844530849752507">
+									<SimplePredicate field="latitude" operator="greaterThan" value="50.1"/>
+									<Node score="-8.303745676260334">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="80.9331"/>
+										<Node score="-6.704978114234033">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="63.3206"/>
+										</Node>
+										<Node score="-14.513562789949312">
+											<SimplePredicate field="latitude" operator="greaterThan" value="63.3206"/>
+										</Node>
+									</Node>
+									<Node score="-20.828067710371815">
+										<SimplePredicate field="longitude" operator="greaterThan" value="80.9331"/>
+										<Node score="-17.131380564536176">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="59.39"/>
+										</Node>
+										<Node score="-27.109233572786817">
+											<SimplePredicate field="latitude" operator="greaterThan" value="59.39"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="13.170808606112013">
+							<SimplePredicate field="month" operator="greaterThan" value="3"/>
+							<Node score="16.0323106911545">
+								<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+								<Node score="19.718218570917333">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="41.38333"/>
+									<Node score="14.765353272407562">
+										<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+										<Node score="19.716711323745027">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="33.7"/>
+										</Node>
+										<Node score="11.800729222939353">
+											<SimplePredicate field="latitude" operator="greaterThan" value="33.7"/>
+										</Node>
+									</Node>
+									<Node score="20.548743232362387">
+										<SimplePredicate field="month" operator="greaterThan" value="4"/>
+										<Node score="11.28588547783491">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="-30.0236"/>
+										</Node>
+										<Node score="21.153206876902335">
+											<SimplePredicate field="latitude" operator="greaterThan" value="-30.0236"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="12.434845958894124">
+									<SimplePredicate field="latitude" operator="greaterThan" value="41.38333"/>
+									<Node score="4.772881530958951">
+										<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+										<Node score="5.850465471270329">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="59.39"/>
+										</Node>
+										<Node score="-2.9219230221209">
+											<SimplePredicate field="latitude" operator="greaterThan" value="59.39"/>
+										</Node>
+									</Node>
+									<Node score="13.707220406228034">
+										<SimplePredicate field="month" operator="greaterThan" value="4"/>
+										<Node score="15.06086660994431">
+											<SimplePredicate field="month" operator="lessOrEqual" value="9"/>
+										</Node>
+										<Node score="6.780496608527144">
+											<SimplePredicate field="month" operator="greaterThan" value="9"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="2.9278833710371526">
+								<SimplePredicate field="month" operator="greaterThan" value="10"/>
+								<Node score="13.65894029265349">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="36.3967"/>
+									<Node score="21.364270059435363">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="28.0372"/>
+										<Node score="18.151700268694366">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="-30.0236"/>
+										</Node>
+										<Node score="22.9307969160836">
+											<SimplePredicate field="latitude" operator="greaterThan" value="-30.0236"/>
+										</Node>
+									</Node>
+									<Node score="9.765015729506977">
+										<SimplePredicate field="latitude" operator="greaterThan" value="28.0372"/>
+										<Node score="11.845483902057044">
+											<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										</Node>
+										<Node score="7.662268045002922">
+											<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-1.2581439574933158">
+									<SimplePredicate field="latitude" operator="greaterThan" value="36.3967"/>
+									<Node score="0.5247861278606794">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="50.1"/>
+										<Node score="3.3238575047611834">
+											<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										</Node>
+										<Node score="-2.297577424882711">
+											<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										</Node>
+									</Node>
+									<Node score="-7.778509394388945">
+										<SimplePredicate field="latitude" operator="greaterThan" value="50.1"/>
+										<Node score="-6.141135195260752">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="80.9331"/>
+										</Node>
+										<Node score="-19.463371685099297">
+											<SimplePredicate field="longitude" operator="greaterThan" value="80.9331"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="2">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="-1.4220071808310623E-16">
+						<True/>
+						<Node score="0.03389213167323367">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="63.595"/>
+							<Node score="0.11538587879210405">
+								<SimplePredicate field="latitude" operator="lessOrEqual" value="46.1167"/>
+								<Node score="-0.13574484817452329">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-103.78819"/>
+									<Node score="0.1145461967026815">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-111.36"/>
+										<Node score="0.39071977367646715">
+											<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										</Node>
+										<Node score="0.02221282796401293">
+											<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										</Node>
+									</Node>
+									<Node score="-0.5699723648298">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-111.36"/>
+										<Node score="0.09409452047662542">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="32.4936"/>
+										</Node>
+										<Node score="-0.6587638241341334">
+											<SimplePredicate field="latitude" operator="greaterThan" value="32.4936"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.20747503191140668">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-103.78819"/>
+									<Node score="0.043831842140169">
+										<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+										<Node score="0.11203852657556644">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="44.0108"/>
+										</Node>
+										<Node score="-0.4286042930140056">
+											<SimplePredicate field="latitude" operator="greaterThan" value="44.0108"/>
+										</Node>
+									</Node>
+									<Node score="0.32506507120004724">
+										<SimplePredicate field="month" operator="greaterThan" value="5"/>
+										<Node score="0.7093775015621175">
+											<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										</Node>
+										<Node score="0.03464463153996616">
+											<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.19824585803379915">
+								<SimplePredicate field="latitude" operator="greaterThan" value="46.1167"/>
+								<Node score="-0.3276677182033749">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-62.3333"/>
+									<Node score="0.007070152810719384">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-115.88333"/>
+										<Node score="0.21060730101195993">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="54.7333"/>
+										</Node>
+										<Node score="-0.5459943209352768">
+											<SimplePredicate field="latitude" operator="greaterThan" value="54.7333"/>
+										</Node>
+									</Node>
+									<Node score="-0.5289184733223337">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-115.88333"/>
+										<Node score="-1.3154169390312687">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="-0.37557916468491653">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.04606686843265336">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-62.3333"/>
+									<Node score="0.2871215903575774">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="33"/>
+										<Node score="0.14925350044013347">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="1.0009934350177985">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+									<Node score="-0.3547501563692925">
+										<SimplePredicate field="longitude" operator="greaterThan" value="33"/>
+										<Node score="-0.9874345861429159">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="-0.23194634245412873">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-1.0736529707333047">
+							<SimplePredicate field="latitude" operator="greaterThan" value="63.595"/>
+							<Node score="-0.25211479143609866">
+								<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+								<Node score="-1.5393930662383832">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-62.3333"/>
+									<Node score="-0.9716300487745756">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-124.8667"/>
+										<Node score="-1.3952759613415575">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="-0.5637869378222405">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+									<Node score="-2.896483786227339">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-124.8667"/>
+										<Node score="-3.083641978105888">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-77.3167"/>
+										</Node>
+										<Node score="-2.3311364585114416">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-77.3167"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.3318648309049766">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-62.3333"/>
+									<Node score="0.9114236847331997">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="33"/>
+										<Node score="1.1083674895507254">
+											<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										</Node>
+										<Node score="0.319575463501624">
+											<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										</Node>
+									</Node>
+									<Node score="-0.641077716349364">
+										<SimplePredicate field="longitude" operator="greaterThan" value="33"/>
+										<Node score="-0.3582929436817308">
+											<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										</Node>
+										<Node score="-1.4680155069498981">
+											<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-1.481824597812081">
+								<SimplePredicate field="month" operator="greaterThan" value="4"/>
+								<Node score="-2.623513085187481">
+									<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+									<Node score="-2.4446237051492066">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="33"/>
+										<Node score="-2.9298111699282723">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="8.1792"/>
+										</Node>
+										<Node score="-1.9726209346575054">
+											<SimplePredicate field="longitude" operator="greaterThan" value="8.1792"/>
+										</Node>
+									</Node>
+									<Node score="-3.1379978442374314">
+										<SimplePredicate field="longitude" operator="greaterThan" value="33"/>
+										<Node score="-2.9262266408136717">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="84.95"/>
+										</Node>
+										<Node score="-3.3608638458938147">
+											<SimplePredicate field="longitude" operator="greaterThan" value="84.95"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-1.3175684804312433">
+									<SimplePredicate field="month" operator="greaterThan" value="5"/>
+									<Node score="-1.9333266519526575">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-62.3333"/>
+										<Node score="-1.072773031302021">
+											<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										</Node>
+										<Node score="-2.590073958634072">
+											<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										</Node>
+									</Node>
+									<Node score="-1.0264960314081997">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-62.3333"/>
+										<Node score="-0.8534629071115492">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="84.95"/>
+										</Node>
+										<Node score="-1.8016277458649126">
+											<SimplePredicate field="longitude" operator="greaterThan" value="84.95"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="3">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="-9.480047872207082E-17">
+						<True/>
+						<Node score="0.039878528635801075">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="59.32"/>
+							<Node score="-0.09708255535728906">
+								<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+								<Node score="0.019660271360693586">
+									<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+									<Node score="0.131745061236037">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="43.65"/>
+										<Node score="0.039187418361114855">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="37.3338"/>
+										</Node>
+										<Node score="0.2321417525656055">
+											<SimplePredicate field="latitude" operator="greaterThan" value="37.3338"/>
+										</Node>
+									</Node>
+									<Node score="-0.18295723468329514">
+										<SimplePredicate field="latitude" operator="greaterThan" value="43.65"/>
+										<Node score="0.3120973161520985">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-115.4278"/>
+										</Node>
+										<Node score="-0.3252437463213199">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-115.4278"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.5582146849084357">
+									<SimplePredicate field="month" operator="greaterThan" value="4"/>
+									<Node score="0.28982203419199215">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="33.8249"/>
+										<Node score="0.4234069806062313">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="31.1"/>
+										</Node>
+										<Node score="0.029170496926926033">
+											<SimplePredicate field="latitude" operator="greaterThan" value="31.1"/>
+										</Node>
+									</Node>
+									<Node score="-0.7714234707596647">
+										<SimplePredicate field="latitude" operator="greaterThan" value="33.8249"/>
+										<Node score="-1.0550592899452187">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-103.0214"/>
+										</Node>
+										<Node score="-0.6126277463552726">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-103.0214"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.1380290600852628">
+								<SimplePredicate field="month" operator="greaterThan" value="5"/>
+								<Node score="0.44385597760789514">
+									<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+									<Node score="0.4809999150218495">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="142.9709"/>
+										<Node score="0.19067126978400936">
+											<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+										</Node>
+										<Node score="0.6265575047714541">
+											<SimplePredicate field="month" operator="greaterThan" value="6"/>
+										</Node>
+									</Node>
+									<Node score="-0.7320713214312408">
+										<SimplePredicate field="longitude" operator="greaterThan" value="142.9709"/>
+										<Node score="-0.7882508120894137">
+											<SimplePredicate field="month" operator="lessOrEqual" value="7"/>
+										</Node>
+										<Node score="-0.6206656241317838">
+											<SimplePredicate field="month" operator="greaterThan" value="7"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.09545841164703035">
+									<SimplePredicate field="month" operator="greaterThan" value="8"/>
+									<Node score="0.3136404244504774">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="32.7127"/>
+										<Node score="0.5695473311306779">
+											<SimplePredicate field="month" operator="lessOrEqual" value="9"/>
+										</Node>
+										<Node score="0.22752090624460153">
+											<SimplePredicate field="month" operator="greaterThan" value="9"/>
+										</Node>
+									</Node>
+									<Node score="-0.1783391606573052">
+										<SimplePredicate field="latitude" operator="greaterThan" value="32.7127"/>
+										<Node score="-0.36690535779746397">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.01336588668741212">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-0.5975936328566813">
+							<SimplePredicate field="latitude" operator="greaterThan" value="59.32"/>
+							<Node score="-0.02418064953381457">
+								<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+								<Node score="-0.8626681013597216">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-62.1833"/>
+									<Node score="-0.4153791086978828">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-124.95"/>
+										<Node score="-0.9192478814689133">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="0.0758577034143537">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+									<Node score="-2.3209718732603277">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-124.95"/>
+										<Node score="-2.7302298445696493">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="-1.9274119956851898">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.36262504984911614">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-62.1833"/>
+									<Node score="0.659468735887415">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="31.21"/>
+										<Node score="0.38542671299939607">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="0.9332393990391694">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+									<Node score="-0.273414032990401">
+										<SimplePredicate field="longitude" operator="greaterThan" value="31.21"/>
+										<Node score="-0.6018631143805983">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="0.04485764136853554">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.8836453751335777">
+								<SimplePredicate field="month" operator="greaterThan" value="4"/>
+								<Node score="-1.8174532869462556">
+									<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+									<Node score="-1.5413730856744734">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="63.66"/>
+										<Node score="-1.4586837017789054">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="76.98"/>
+										</Node>
+										<Node score="-2.223286264489824">
+											<SimplePredicate field="longitude" operator="greaterThan" value="76.98"/>
+										</Node>
+									</Node>
+									<Node score="-2.1124366035720974">
+										<SimplePredicate field="latitude" operator="greaterThan" value="63.66"/>
+										<Node score="-2.013812772180448">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="76.98"/>
+										</Node>
+										<Node score="-2.7120542079168306">
+											<SimplePredicate field="longitude" operator="greaterThan" value="76.98"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.7494431953590834">
+									<SimplePredicate field="month" operator="greaterThan" value="5"/>
+									<Node score="-1.196869625119686">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-62.1833"/>
+										<Node score="-0.6641509737691959">
+											<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										</Node>
+										<Node score="-1.6038519659755157">
+											<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										</Node>
+									</Node>
+									<Node score="-0.5375126322569082">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-62.1833"/>
+										<Node score="-0.30937061403289906">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="31.21"/>
+										</Node>
+										<Node score="-1.0189778366740452">
+											<SimplePredicate field="longitude" operator="greaterThan" value="31.21"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="4">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="-6.89458027069606E-17">
+						<True/>
+						<Node score="0.026401594435983302">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="62.52"/>
+							<Node score="0.20820367987448007">
+								<SimplePredicate field="latitude" operator="lessOrEqual" value="34.6044"/>
+								<Node score="0.2673494602605651">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="143.2297"/>
+									<Node score="0.10508378677361481">
+										<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+										<Node score="0.25046727657876605">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="31.0157"/>
+										</Node>
+										<Node score="-0.05029925379006083">
+											<SimplePredicate field="latitude" operator="greaterThan" value="31.0157"/>
+										</Node>
+									</Node>
+									<Node score="0.3842938858418762">
+										<SimplePredicate field="month" operator="greaterThan" value="5"/>
+										<Node score="0.624307133497132">
+											<SimplePredicate field="month" operator="lessOrEqual" value="9"/>
+										</Node>
+										<Node score="0.0614842320067519">
+											<SimplePredicate field="month" operator="greaterThan" value="9"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.21813847444910534">
+									<SimplePredicate field="longitude" operator="greaterThan" value="143.2297"/>
+									<Node score="-0.34226450117417034">
+										<SimplePredicate field="month" operator="lessOrEqual" value="9"/>
+										<Node score="-0.03978602981849261">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="-0.4296596281626327">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+									<Node score="0.15777753969862995">
+										<SimplePredicate field="month" operator="greaterThan" value="9"/>
+										<Node score="0.40615751279770973">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.032832775297222755">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.026278585962433598">
+								<SimplePredicate field="latitude" operator="greaterThan" value="34.6044"/>
+								<Node score="0.03817799977067969">
+									<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+									<Node score="-0.09479678717315085">
+										<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+										<Node score="0.015702467658248294">
+											<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+										</Node>
+										<Node score="-0.3123313111639311">
+											<SimplePredicate field="month" operator="greaterThan" value="4"/>
+										</Node>
+									</Node>
+									<Node score="0.43420761878636444">
+										<SimplePredicate field="month" operator="greaterThan" value="6"/>
+										<Node score="0.2221203986102288">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="41.3831"/>
+										</Node>
+										<Node score="0.5593747216204217">
+											<SimplePredicate field="latitude" operator="greaterThan" value="41.3831"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.15710056193695518">
+									<SimplePredicate field="month" operator="greaterThan" value="8"/>
+									<Node score="-0.32918491856545096">
+										<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										<Node score="-0.9178739616920315">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="41.3831"/>
+										</Node>
+										<Node score="0.022572066824606263">
+											<SimplePredicate field="latitude" operator="greaterThan" value="41.3831"/>
+										</Node>
+									</Node>
+									<Node score="0.01784672430169224">
+										<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										<Node score="0.7788588955973544">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-119.86667"/>
+										</Node>
+										<Node score="-0.07888533781220047">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-119.86667"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-0.6938978502993409">
+							<SimplePredicate field="latitude" operator="greaterThan" value="62.52"/>
+							<Node score="-1.2533562398941536">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="-64.1667"/>
+								<Node score="-0.947226233437743">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-122.0031"/>
+									<Node score="-0.656664700418843">
+										<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										<Node score="-0.8425150620171724">
+											<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+										</Node>
+										<Node score="-0.3582465371674344">
+											<SimplePredicate field="month" operator="greaterThan" value="5"/>
+										</Node>
+									</Node>
+									<Node score="-1.5276396271536408">
+										<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										<Node score="-1.3325708931987603">
+											<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										</Node>
+										<Node score="-2.1525382692512234">
+											<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-2.1131610209163627">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-122.0031"/>
+									<Node score="-2.0240771277969136">
+										<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										<Node score="-2.2607261285635394">
+											<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+										</Node>
+										<Node score="-1.7477649956363461">
+											<SimplePredicate field="month" operator="greaterThan" value="6"/>
+										</Node>
+									</Node>
+									<Node score="-3.1314486984504675">
+										<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										<Node score="-3.349878244677761">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-77.73333"/>
+										</Node>
+										<Node score="-2.239747358128994">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-77.73333"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.4512413701786696">
+								<SimplePredicate field="longitude" operator="greaterThan" value="-64.1667"/>
+								<Node score="0.35824760432582775">
+									<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+									<Node score="0.07537289466019668">
+										<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										<Node score="0.42511727989321674">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="30.9331"/>
+										</Node>
+										<Node score="-0.558194125160529">
+											<SimplePredicate field="longitude" operator="greaterThan" value="30.9331"/>
+										</Node>
+									</Node>
+									<Node score="0.9176974063051209">
+										<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										<Node score="1.0915628321905029">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="30.9331"/>
+										</Node>
+										<Node score="0.6110935668829137">
+											<SimplePredicate field="longitude" operator="greaterThan" value="30.9331"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.7220877483132673">
+									<SimplePredicate field="month" operator="greaterThan" value="3"/>
+									<Node score="-0.5713727692479559">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="82.95"/>
+										<Node score="-0.7387173642918128">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.015300623203484527">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+									<Node score="-1.4128806574851467">
+										<SimplePredicate field="longitude" operator="greaterThan" value="82.95"/>
+										<Node score="-1.0402857031156556">
+											<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										</Node>
+										<Node score="-1.8920527479577385">
+											<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="5">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="-1.055732603950334E-16">
+						<True/>
+						<Node score="0.07485443346619007">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="46.2778"/>
+							<Node score="-0.10411938093775804">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="-100.9176"/>
+								<Node score="0.13993294729634528">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-113.0564"/>
+									<Node score="0.10030865712338739">
+										<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										<Node score="0.34106694620417566">
+											<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										</Node>
+										<Node score="0.009987091360154708">
+											<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										</Node>
+									</Node>
+									<Node score="0.583029317473405">
+										<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										<Node score="0.950739882396852">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-120.1791"/>
+										</Node>
+										<Node score="0.2824534077488112">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-120.1791"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.3117736137110052">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-113.0564"/>
+									<Node score="-0.4282192238178502">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="41.6093"/>
+										<Node score="-0.017425580992630484">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="34.0038"/>
+										</Node>
+										<Node score="-0.5890308626784223">
+											<SimplePredicate field="latitude" operator="greaterThan" value="34.0038"/>
+										</Node>
+									</Node>
+									<Node score="0.0018562337047182853">
+										<SimplePredicate field="latitude" operator="greaterThan" value="41.6093"/>
+										<Node score="0.11157571683656585">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="-0.5519359900854776">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.15255653501004116">
+								<SimplePredicate field="longitude" operator="greaterThan" value="-100.9176"/>
+								<Node score="0.19080552055567726">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="73.5"/>
+									<Node score="0.1534721857500957">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-64.217"/>
+										<Node score="0.2183472277728741">
+											<SimplePredicate field="month" operator="lessOrEqual" value="9"/>
+										</Node>
+										<Node score="-0.04338952735961884">
+											<SimplePredicate field="month" operator="greaterThan" value="9"/>
+										</Node>
+									</Node>
+									<Node score="0.5437584194122548">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-64.217"/>
+										<Node score="-0.768348011870057">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="-28.5481"/>
+										</Node>
+										<Node score="0.6045688807040062">
+											<SimplePredicate field="latitude" operator="greaterThan" value="-28.5481"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.07454004560651462">
+									<SimplePredicate field="longitude" operator="greaterThan" value="73.5"/>
+									<Node score="0.015095322391169168">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="28.6"/>
+										<Node score="-0.15310757391836993">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="-28.5481"/>
+										</Node>
+										<Node score="0.23162547574508704">
+											<SimplePredicate field="latitude" operator="greaterThan" value="-28.5481"/>
+										</Node>
+									</Node>
+									<Node score="-0.34839035626249293">
+										<SimplePredicate field="latitude" operator="greaterThan" value="28.6"/>
+										<Node score="-0.6526919230335306">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="116.92"/>
+										</Node>
+										<Node score="-0.15468012988264881">
+											<SimplePredicate field="longitude" operator="greaterThan" value="116.92"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-0.19592413396338618">
+							<SimplePredicate field="latitude" operator="greaterThan" value="46.2778"/>
+							<Node score="-0.1476413583710255">
+								<SimplePredicate field="latitude" operator="lessOrEqual" value="63.65389"/>
+								<Node score="-0.25793967259436296">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-64.217"/>
+									<Node score="-0.09906634101838606">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-103.83333"/>
+										<Node score="0.022760152831455757">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="52.4167"/>
+										</Node>
+										<Node score="-0.3796297480252965">
+											<SimplePredicate field="latitude" operator="greaterThan" value="52.4167"/>
+										</Node>
+									</Node>
+									<Node score="-0.5660101386638968">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-103.83333"/>
+										<Node score="-1.2537808100960521">
+											<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										</Node>
+										<Node score="-0.33991178828488433">
+											<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.052621924688366455">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-64.217"/>
+									<Node score="0.18469674874390038">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="73.5"/>
+										<Node score="0.46618026490116726">
+											<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+										</Node>
+										<Node score="0.04469896050888727">
+											<SimplePredicate field="month" operator="greaterThan" value="4"/>
+										</Node>
+									</Node>
+									<Node score="-0.4074664827269853">
+										<SimplePredicate field="longitude" operator="greaterThan" value="73.5"/>
+										<Node score="-0.8129000435122502">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="50.55"/>
+										</Node>
+										<Node score="-0.2968275833372958">
+											<SimplePredicate field="latitude" operator="greaterThan" value="50.55"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.589304166443634">
+								<SimplePredicate field="latitude" operator="greaterThan" value="63.65389"/>
+								<Node score="-0.009719269578610334">
+									<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+									<Node score="-0.7848667159989565">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-64.217"/>
+										<Node score="-0.5649473724949217">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-120.1791"/>
+										</Node>
+										<Node score="-1.4112595832850787">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-120.1791"/>
+										</Node>
+									</Node>
+									<Node score="0.3259679124675139">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-64.217"/>
+										<Node score="0.5442611833307323">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="73.5"/>
+										</Node>
+										<Node score="-0.5072226038002949">
+											<SimplePredicate field="longitude" operator="greaterThan" value="73.5"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.7802043505569656">
+									<SimplePredicate field="month" operator="greaterThan" value="3"/>
+									<Node score="-1.106188512359721">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="5.3831"/>
+										<Node score="-0.8068857024382882">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-125.1167"/>
+										</Node>
+										<Node score="-1.5772186265592785">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-125.1167"/>
+										</Node>
+									</Node>
+									<Node score="-0.5938752529735442">
+										<SimplePredicate field="longitude" operator="greaterThan" value="5.3831"/>
+										<Node score="-0.41686840934270175">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="73.5"/>
+										</Node>
+										<Node score="-1.191406515385171">
+											<SimplePredicate field="longitude" operator="greaterThan" value="73.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="6">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="-1.055732603950334E-16">
+						<True/>
+						<Node score="0.05710173106231175">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="46.8925"/>
+							<Node score="-0.08478281208148546">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="-102.803"/>
+								<Node score="0.11180950903142634">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-112.5833"/>
+									<Node score="0.29425368227440424">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="37.4286"/>
+										<Node score="0.19729558281944773">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-115.285"/>
+										</Node>
+										<Node score="0.7598454322950126">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-115.285"/>
+										</Node>
+									</Node>
+									<Node score="0.03180961907383017">
+										<SimplePredicate field="latitude" operator="greaterThan" value="37.4286"/>
+										<Node score="0.3597779288286091">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-122.0333"/>
+										</Node>
+										<Node score="-0.08450104018416696">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-122.0333"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.29464923178971547">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-112.5833"/>
+									<Node score="-0.4199521716909332">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="41.4603"/>
+										<Node score="-0.004362984349466822">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="33.7091"/>
+										</Node>
+										<Node score="-0.5654206882683279">
+											<SimplePredicate field="latitude" operator="greaterThan" value="33.7091"/>
+										</Node>
+									</Node>
+									<Node score="-0.01256684537601567">
+										<SimplePredicate field="latitude" operator="greaterThan" value="41.4603"/>
+										<Node score="0.07633538436114366">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="-0.46140626118228206">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.11360606290526938">
+								<SimplePredicate field="longitude" operator="greaterThan" value="-102.803"/>
+								<Node score="-0.008209360331996126">
+									<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+									<Node score="0.060536142805223216">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="43.4167"/>
+										<Node score="0.11723029898941578">
+											<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+										</Node>
+										<Node score="-0.16495961299569087">
+											<SimplePredicate field="month" operator="greaterThan" value="4"/>
+										</Node>
+									</Node>
+									<Node score="-0.2988264180129849">
+										<SimplePredicate field="latitude" operator="greaterThan" value="43.4167"/>
+										<Node score="-0.3986668048626146">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-55.6667"/>
+										</Node>
+										<Node score="0.38094405477776117">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-55.6667"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.20111649836836398">
+									<SimplePredicate field="month" operator="greaterThan" value="5"/>
+									<Node score="0.4008327483318579">
+										<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										<Node score="-0.515741785836648">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="11.117"/>
+										</Node>
+										<Node score="0.5089147910658748">
+											<SimplePredicate field="latitude" operator="greaterThan" value="11.117"/>
+										</Node>
+									</Node>
+									<Node score="0.05016197226736723">
+										<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										<Node score="0.25807475800854646">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="32.5"/>
+										</Node>
+										<Node score="-0.019833085872001447">
+											<SimplePredicate field="latitude" operator="greaterThan" value="32.5"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-0.16931381732964168">
+							<SimplePredicate field="latitude" operator="greaterThan" value="46.8925"/>
+							<Node score="-0.2841003285545107">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="-55.6667"/>
+								<Node score="-0.12812829405995627">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-105.6333"/>
+									<Node score="0.04164875310363411">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="51.72"/>
+										<Node score="0.30966459176715955">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-122.0333"/>
+										</Node>
+										<Node score="-0.04663603368483332">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-122.0333"/>
+										</Node>
+									</Node>
+									<Node score="-0.3476927557595162">
+										<SimplePredicate field="latitude" operator="greaterThan" value="51.72"/>
+										<Node score="-0.21702597233597076">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="58.7667"/>
+										</Node>
+										<Node score="-0.5300332489815709">
+											<SimplePredicate field="latitude" operator="greaterThan" value="58.7667"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.5741144629419938">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-105.6333"/>
+									<Node score="-1.2972730125329404">
+										<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										<Node score="-1.1818490368934318">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="51.72"/>
+										</Node>
+										<Node score="-1.9118050561867084">
+											<SimplePredicate field="latitude" operator="greaterThan" value="51.72"/>
+										</Node>
+									</Node>
+									<Node score="-0.431554762440163">
+										<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										<Node score="-0.31029781052366534">
+											<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										</Node>
+										<Node score="-1.562577270032044">
+											<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.002637274352144275">
+								<SimplePredicate field="longitude" operator="greaterThan" value="-55.6667"/>
+								<Node score="0.20186933058056616">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="36.1667"/>
+									<Node score="0.7358663649494281">
+										<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										<Node score="1.0691140561539716">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="58.7667"/>
+										</Node>
+										<Node score="0.4143318959267582">
+											<SimplePredicate field="latitude" operator="greaterThan" value="58.7667"/>
+										</Node>
+									</Node>
+									<Node score="0.025433953137884525">
+										<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										<Node score="-0.18378878187708478">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.7847246098315517">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.33671081335304054">
+									<SimplePredicate field="longitude" operator="greaterThan" value="36.1667"/>
+									<Node score="-0.23920476713116987">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="63.24"/>
+										<Node score="-0.7359408622620809">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="-0.1423711968804227">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+									<Node score="-0.7206806115842647">
+										<SimplePredicate field="latitude" operator="greaterThan" value="63.24"/>
+										<Node score="-0.511392860183738">
+											<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										</Node>
+										<Node score="-1.1456190952220835">
+											<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="7">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="-4.740023936103541E-17">
+						<True/>
+						<Node score="0.04290596250290572">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="47.6455"/>
+							<Node score="-0.04600676885946074">
+								<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+								<Node score="0.023082408070802345">
+									<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+									<Node score="0.0637035425882959">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="43.9483"/>
+										<Node score="-0.09384586429957262">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="33.66667"/>
+										</Node>
+										<Node score="0.13161050637198368">
+											<SimplePredicate field="latitude" operator="greaterThan" value="33.66667"/>
+										</Node>
+									</Node>
+									<Node score="-0.13606311036559884">
+										<SimplePredicate field="latitude" operator="greaterThan" value="43.9483"/>
+										<Node score="-0.5032362070724001">
+											<SimplePredicate field="month" operator="lessOrEqual" value="1"/>
+										</Node>
+										<Node score="-0.015450642594655737">
+											<SimplePredicate field="month" operator="greaterThan" value="1"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.3209349554167471">
+									<SimplePredicate field="month" operator="greaterThan" value="4"/>
+									<Node score="0.23454595870276976">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="33.66667"/>
+										<Node score="-0.11030943403665246">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-105.492"/>
+										</Node>
+										<Node score="0.2877481358523812">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-105.492"/>
+										</Node>
+									</Node>
+									<Node score="-0.4947906355056585">
+										<SimplePredicate field="latitude" operator="greaterThan" value="33.66667"/>
+										<Node score="-0.7991848841226357">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-103.1313"/>
+										</Node>
+										<Node score="-0.3465570817348901">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-103.1313"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.10680939775821607">
+								<SimplePredicate field="month" operator="greaterThan" value="5"/>
+								<Node score="0.2835768015950343">
+									<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+									<Node score="-0.3500357713993836">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="15.25"/>
+										<Node score="-0.13858153122918723">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="18.23"/>
+										</Node>
+										<Node score="-0.3756019975565159">
+											<SimplePredicate field="longitude" operator="greaterThan" value="18.23"/>
+										</Node>
+									</Node>
+									<Node score="0.3365717186442994">
+										<SimplePredicate field="latitude" operator="greaterThan" value="15.25"/>
+										<Node score="0.6777384957663708">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="33.66667"/>
+										</Node>
+										<Node score="0.2645005438910669">
+											<SimplePredicate field="latitude" operator="greaterThan" value="33.66667"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.026931115380636896">
+									<SimplePredicate field="month" operator="greaterThan" value="8"/>
+									<Node score="-0.16193983261131276">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-97.9882"/>
+										<Node score="0.1427299024692213">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-114.8466"/>
+										</Node>
+										<Node score="-0.3350387604377671">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-114.8466"/>
+										</Node>
+									</Node>
+									<Node score="0.04818837500399313">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-97.9882"/>
+										<Node score="0.09542768190367079">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="44.55"/>
+										</Node>
+										<Node score="-0.23238997493981428">
+											<SimplePredicate field="latitude" operator="greaterThan" value="44.55"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-0.14565662728295087">
+							<SimplePredicate field="latitude" operator="greaterThan" value="47.6455"/>
+							<Node score="-0.2556815143839102">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="-61.45"/>
+								<Node score="-0.17431838176975276">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-96.3033"/>
+									<Node score="-0.7119092387030242">
+										<SimplePredicate field="month" operator="lessOrEqual" value="1"/>
+										<Node score="-0.3886722370148366">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-112.353"/>
+										</Node>
+										<Node score="-1.3235764597771067">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-112.353"/>
+										</Node>
+									</Node>
+									<Node score="-0.1272478211356612">
+										<SimplePredicate field="month" operator="greaterThan" value="1"/>
+										<Node score="-0.02347036386496668">
+											<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										</Node>
+										<Node score="-0.31569379896031285">
+											<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.7118325894015214">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-96.3033"/>
+									<Node score="-0.5388732548047852">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="51.9333"/>
+										<Node score="-0.9154421050728202">
+											<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+										</Node>
+										<Node score="-0.27198759643371634">
+											<SimplePredicate field="month" operator="greaterThan" value="5"/>
+										</Node>
+									</Node>
+									<Node score="-1.4146510069697913">
+										<SimplePredicate field="latitude" operator="greaterThan" value="51.9333"/>
+										<Node score="-1.7488354721742365">
+											<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+										</Node>
+										<Node score="-1.1784348029360487">
+											<SimplePredicate field="month" operator="greaterThan" value="5"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.004952479515987023">
+								<SimplePredicate field="longitude" operator="greaterThan" value="-61.45"/>
+								<Node score="0.14950786535131824">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="35.533"/>
+									<Node score="0.5142111616031441">
+										<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+										<Node score="0.632183428817541">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="18.23"/>
+										</Node>
+										<Node score="0.2998257753924862">
+											<SimplePredicate field="longitude" operator="greaterThan" value="18.23"/>
+										</Node>
+									</Node>
+									<Node score="-0.0331064493455425">
+										<SimplePredicate field="month" operator="greaterThan" value="4"/>
+										<Node score="-0.25134794956084794">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.6420830499229963">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.2696159576197932">
+									<SimplePredicate field="longitude" operator="greaterThan" value="35.533"/>
+									<Node score="-0.15598177620007483">
+										<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										<Node score="-0.3923522890917923">
+											<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+										</Node>
+										<Node score="0.2304997097234537">
+											<SimplePredicate field="month" operator="greaterThan" value="5"/>
+										</Node>
+									</Node>
+									<Node score="-0.5014118278633278">
+										<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										<Node score="-0.931007795767375">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="-0.06145950485012489">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="8">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="year"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="-7.110035904155311E-17">
+						<True/>
+						<Node score="0.018579547125920647">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="59.3"/>
+							<Node score="-0.05908424709481758">
+								<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+								<Node score="0.0061889529011611745">
+									<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+									<Node score="0.4927639622986599">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-122.2605"/>
+										<Node score="0.012916085110360579">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="28.0153"/>
+										</Node>
+										<Node score="0.5676235754539972">
+											<SimplePredicate field="latitude" operator="greaterThan" value="28.0153"/>
+										</Node>
+									</Node>
+									<Node score="-0.018547117035158246">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-122.2605"/>
+										<Node score="0.04787512612330778">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="43.3686"/>
+										</Node>
+										<Node score="-0.13896087099556095">
+											<SimplePredicate field="latitude" operator="greaterThan" value="43.3686"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.31691112879215777">
+									<SimplePredicate field="month" operator="greaterThan" value="4"/>
+									<Node score="0.11381261228218997">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="35.3992"/>
+										<Node score="0.24027473475862343">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="32.5111"/>
+										</Node>
+										<Node score="-0.09398499788129844">
+											<SimplePredicate field="latitude" operator="greaterThan" value="32.5111"/>
+										</Node>
+									</Node>
+									<Node score="-0.46753610173801824">
+										<SimplePredicate field="latitude" operator="greaterThan" value="35.3992"/>
+										<Node score="-0.6843590417302697">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="41.3363"/>
+										</Node>
+										<Node score="-0.34659040619948184">
+											<SimplePredicate field="latitude" operator="greaterThan" value="41.3363"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.0742357293933826">
+								<SimplePredicate field="month" operator="greaterThan" value="5"/>
+								<Node score="0.21617993810159525">
+									<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+									<Node score="-0.2231655016997961">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="18.251"/>
+										<Node score="0.10723947063624971">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="16.37"/>
+										</Node>
+										<Node score="-0.2789628995075413">
+											<SimplePredicate field="longitude" operator="greaterThan" value="16.37"/>
+										</Node>
+									</Node>
+									<Node score="0.24813932223393353">
+										<SimplePredicate field="latitude" operator="greaterThan" value="18.251"/>
+										<Node score="0.0821730169588979">
+											<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+										</Node>
+										<Node score="0.33135167078158084">
+											<SimplePredicate field="month" operator="greaterThan" value="6"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.03413410533053573">
+									<SimplePredicate field="month" operator="greaterThan" value="8"/>
+									<Node score="0.3101523537599906">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-120.4264"/>
+										<Node score="-0.012170719146428522">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.635521976887433">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+									<Node score="-0.06399776810900745">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-120.4264"/>
+										<Node score="-0.2661809184605773">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-100.3"/>
+										</Node>
+										<Node score="0.02050284724016229">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-100.3"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-0.2770974737982725">
+							<SimplePredicate field="latitude" operator="greaterThan" value="59.3"/>
+							<Node score="0.051669362877093554">
+								<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+								<Node score="-0.24151314099079083">
+									<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+									<Node score="-0.6163159184258528">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-77.45"/>
+										<Node score="-0.4118764912874146">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-124.8333"/>
+										</Node>
+										<Node score="-1.4753392739544635">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-124.8333"/>
+										</Node>
+									</Node>
+									<Node score="-0.08364716919468447">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-77.45"/>
+										<Node score="-0.26308164776270393">
+											<SimplePredicate field="year" operator="lessOrEqual" value="1986"/>
+										</Node>
+										<Node score="0.11623749171683279">
+											<SimplePredicate field="year" operator="greaterThan" value="1986"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.3401243619206626">
+									<SimplePredicate field="month" operator="greaterThan" value="2"/>
+									<Node score="0.5404519275362637">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="63.38"/>
+										<Node score="0.42011694506057795">
+											<SimplePredicate field="year" operator="lessOrEqual" value="1989"/>
+										</Node>
+										<Node score="0.6965038379095327">
+											<SimplePredicate field="year" operator="greaterThan" value="1989"/>
+										</Node>
+									</Node>
+									<Node score="0.14056200822186968">
+										<SimplePredicate field="latitude" operator="greaterThan" value="63.38"/>
+										<Node score="0.4636166630319732">
+											<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										</Node>
+										<Node score="-0.1803375196604725">
+											<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.4411129637898758">
+								<SimplePredicate field="month" operator="greaterThan" value="4"/>
+								<Node score="-1.1103918942475024">
+									<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+									<Node score="-1.0508901801126582">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="76.98"/>
+										<Node score="-1.2310953828214908">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="5.5553"/>
+										</Node>
+										<Node score="-0.9276658260092612">
+											<SimplePredicate field="longitude" operator="greaterThan" value="5.5553"/>
+										</Node>
+									</Node>
+									<Node score="-1.5323077583608464">
+										<SimplePredicate field="longitude" operator="greaterThan" value="76.98"/>
+										<Node score="-1.650847887025474">
+											<SimplePredicate field="year" operator="lessOrEqual" value="1989"/>
+										</Node>
+										<Node score="-1.2910341056258516">
+											<SimplePredicate field="year" operator="greaterThan" value="1989"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.34492721271085136">
+									<SimplePredicate field="month" operator="greaterThan" value="5"/>
+									<Node score="-0.10947809289344737">
+										<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										<Node score="-0.3189879296291451">
+											<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+										</Node>
+										<Node score="-0.003997287495384928">
+											<SimplePredicate field="month" operator="greaterThan" value="6"/>
+										</Node>
+									</Node>
+									<Node score="-0.5229333482310221">
+										<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										<Node score="-0.8343205032120515">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="-0.20769316195463988">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="9">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="year"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="-8.618225338370075E-18">
+						<True/>
+						<Node score="0.01593209510403748">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="60.2064"/>
+							<Node score="-0.04519549545595914">
+								<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+								<Node score="0.008398879240485">
+									<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+									<Node score="0.3137360510907498">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-120.3606"/>
+										<Node score="0.039888741256284714">
+											<SimplePredicate field="month" operator="lessOrEqual" value="1"/>
+										</Node>
+										<Node score="0.4037250742608331">
+											<SimplePredicate field="month" operator="greaterThan" value="1"/>
+										</Node>
+									</Node>
+									<Node score="-0.018927606096447572">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-120.3606"/>
+										<Node score="-0.06279371136222014">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-61.8667"/>
+										</Node>
+										<Node score="0.14795302481344685">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-61.8667"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.2569044876410704">
+									<SimplePredicate field="month" operator="greaterThan" value="4"/>
+									<Node score="0.06612830042139488">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="36.3697"/>
+										<Node score="0.2212269166211146">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="31.07806"/>
+										</Node>
+										<Node score="-0.060130198852567235">
+											<SimplePredicate field="latitude" operator="greaterThan" value="31.07806"/>
+										</Node>
+									</Node>
+									<Node score="-0.39066397296449884">
+										<SimplePredicate field="latitude" operator="greaterThan" value="36.3697"/>
+										<Node score="-0.5800543465546776">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="41.6281"/>
+										</Node>
+										<Node score="-0.29311097216058113">
+											<SimplePredicate field="latitude" operator="greaterThan" value="41.6281"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.05973657762166863">
+								<SimplePredicate field="month" operator="greaterThan" value="5"/>
+								<Node score="0.1715835707579516">
+									<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+									<Node score="-0.2204554525464964">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="16.467"/>
+										<Node score="-0.12850453440054907">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="118.083"/>
+										</Node>
+										<Node score="-0.2619283075003849">
+											<SimplePredicate field="longitude" operator="greaterThan" value="118.083"/>
+										</Node>
+									</Node>
+									<Node score="0.19819758912909233">
+										<SimplePredicate field="latitude" operator="greaterThan" value="16.467"/>
+										<Node score="0.4282042440156918">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="35.573"/>
+										</Node>
+										<Node score="0.136173366180787">
+											<SimplePredicate field="latitude" operator="greaterThan" value="35.573"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.025660159012831404">
+									<SimplePredicate field="month" operator="greaterThan" value="8"/>
+									<Node score="-0.07045369981597874">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-61.8667"/>
+										<Node score="0.24379672551822287">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-120.3606"/>
+										</Node>
+										<Node score="-0.10588316747434288">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-120.3606"/>
+										</Node>
+									</Node>
+									<Node score="0.16412613020326083">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-61.8667"/>
+										<Node score="0.46990970926713066">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="29.4739"/>
+										</Node>
+										<Node score="-0.010956738824197449">
+											<SimplePredicate field="longitude" operator="greaterThan" value="29.4739"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-0.2733343708888169">
+							<SimplePredicate field="latitude" operator="greaterThan" value="60.2064"/>
+							<Node score="-0.012740011078717651">
+								<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+								<Node score="-0.24883671425440912">
+									<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+									<Node score="-0.5628876682696984">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-61.8667"/>
+										<Node score="-0.7723670264265391">
+											<SimplePredicate field="year" operator="lessOrEqual" value="1999"/>
+										</Node>
+										<Node score="-0.17101580209897138">
+											<SimplePredicate field="year" operator="greaterThan" value="1999"/>
+										</Node>
+									</Node>
+									<Node score="-0.10273271072222152">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-61.8667"/>
+										<Node score="0.7219708386261366">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="6.5681"/>
+										</Node>
+										<Node score="-0.15629374169525445">
+											<SimplePredicate field="longitude" operator="greaterThan" value="6.5681"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.2192077637822558">
+									<SimplePredicate field="month" operator="greaterThan" value="2"/>
+									<Node score="0.43477099898343063">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="64"/>
+										<Node score="0.3199064936321047">
+											<SimplePredicate field="year" operator="lessOrEqual" value="1988"/>
+										</Node>
+										<Node score="0.5733393242268457">
+											<SimplePredicate field="year" operator="greaterThan" value="1988"/>
+										</Node>
+									</Node>
+									<Node score="0.006311520113386336">
+										<SimplePredicate field="latitude" operator="greaterThan" value="64"/>
+										<Node score="-0.4456213887576761">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-61.8667"/>
+										</Node>
+										<Node score="0.21914761646743336">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-61.8667"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.40333492566887347">
+								<SimplePredicate field="month" operator="greaterThan" value="4"/>
+								<Node score="-0.919279110078604">
+									<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+									<Node score="-0.6612819460161385">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-127.9833"/>
+										<Node score="-0.7866113768992194">
+											<SimplePredicate field="year" operator="lessOrEqual" value="2002"/>
+										</Node>
+										<Node score="-0.370610816620074">
+											<SimplePredicate field="year" operator="greaterThan" value="2002"/>
+										</Node>
+									</Node>
+									<Node score="-0.9990678613389055">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-127.9833"/>
+										<Node score="-1.9506039248865656">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-61.8667"/>
+										</Node>
+										<Node score="-0.8749483279636785">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-61.8667"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.32915985927321806">
+									<SimplePredicate field="month" operator="greaterThan" value="5"/>
+									<Node score="-0.10123488684834073">
+										<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										<Node score="-0.24173641557939543">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="16.42"/>
+										</Node>
+										<Node score="0.02398231426751478">
+											<SimplePredicate field="longitude" operator="greaterThan" value="16.42"/>
+										</Node>
+									</Node>
+									<Node score="-0.5010614573527803">
+										<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										<Node score="-0.7208504650283674">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="-0.2783547480850398">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="10">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="-6.248213370318303E-17">
+						<True/>
+						<Node score="0.028121428835545886">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="48.1333"/>
+							<Node score="-0.056968173209536656">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="-103.21667"/>
+								<Node score="-0.17316772541400138">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="41.3366"/>
+									<Node score="-0.0430520990871331">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-108.4811"/>
+										<Node score="0.08882537454346616">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="38.7708"/>
+										</Node>
+										<Node score="-0.3525348513028318">
+											<SimplePredicate field="latitude" operator="greaterThan" value="38.7708"/>
+										</Node>
+									</Node>
+									<Node score="-0.502477724156522">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-108.4811"/>
+										<Node score="-0.7120773239785998">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-105.6975"/>
+										</Node>
+										<Node score="-0.2512126289559968">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-105.6975"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.09907170389866082">
+									<SimplePredicate field="latitude" operator="greaterThan" value="41.3366"/>
+									<Node score="-0.2011223373215716">
+										<SimplePredicate field="month" operator="lessOrEqual" value="1"/>
+										<Node score="-0.531151392477117">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-117.866667"/>
+										</Node>
+										<Node score="0.002374420777348488">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-117.866667"/>
+										</Node>
+									</Node>
+									<Node score="0.1262501651006592">
+										<SimplePredicate field="month" operator="greaterThan" value="1"/>
+										<Node score="0.17115232160887459">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="-0.07891336529491137">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.06272172985315912">
+								<SimplePredicate field="longitude" operator="greaterThan" value="-103.21667"/>
+								<Node score="0.09335327432874597">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="44.8375"/>
+									<Node score="0.12261500334068863">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="84.4"/>
+										<Node score="0.09795999003525509">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-55.85"/>
+										</Node>
+										<Node score="0.39178448945488364">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-55.85"/>
+										</Node>
+									</Node>
+									<Node score="-0.0789248462560262">
+										<SimplePredicate field="longitude" operator="greaterThan" value="84.4"/>
+										<Node score="0.02702640574287059">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="27.1819"/>
+										</Node>
+										<Node score="-0.41784158139722927">
+											<SimplePredicate field="latitude" operator="greaterThan" value="27.1819"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.12382916019779289">
+									<SimplePredicate field="latitude" operator="greaterThan" value="44.8375"/>
+									<Node score="-0.027977478764911412">
+										<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										<Node score="-0.4152209642102296">
+											<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										</Node>
+										<Node score="0.1357145944136511">
+											<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										</Node>
+									</Node>
+									<Node score="-0.6133578077704905">
+										<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										<Node score="-0.5762665145155408">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="84.4"/>
+										</Node>
+										<Node score="-1.7491976921230084">
+											<SimplePredicate field="longitude" operator="greaterThan" value="84.4"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-0.10318833194592805">
+							<SimplePredicate field="latitude" operator="greaterThan" value="48.1333"/>
+							<Node score="-0.21286440568662238">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="-55.85"/>
+								<Node score="-0.14231061934221398">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-96.3033"/>
+									<Node score="-0.552970242993814">
+										<SimplePredicate field="month" operator="lessOrEqual" value="1"/>
+										<Node score="-0.311837859588655">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-110.96667"/>
+										</Node>
+										<Node score="-1.1159036158969695">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-110.96667"/>
+										</Node>
+									</Node>
+									<Node score="-0.10644215012248766">
+										<SimplePredicate field="month" operator="greaterThan" value="1"/>
+										<Node score="-0.0675152734091649">
+											<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										</Node>
+										<Node score="-0.5193334567955393">
+											<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.6023131648533858">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-96.3033"/>
+									<Node score="-0.47564694122011764">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="52.7"/>
+										<Node score="-0.7482249542220715">
+											<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+										</Node>
+										<Node score="-0.28231830417428183">
+											<SimplePredicate field="month" operator="greaterThan" value="5"/>
+										</Node>
+									</Node>
+									<Node score="-1.0459398698399716">
+										<SimplePredicate field="latitude" operator="greaterThan" value="52.7"/>
+										<Node score="-1.2540479826206723">
+											<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+										</Node>
+										<Node score="-0.8379457368563209">
+											<SimplePredicate field="month" operator="greaterThan" value="6"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.0339638461342794">
+								<SimplePredicate field="longitude" operator="greaterThan" value="-55.85"/>
+								<Node score="0.16951695536032907">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="36.1667"/>
+									<Node score="0.4965346378610838">
+										<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										<Node score="0.8203289580204851">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="59.65"/>
+										</Node>
+										<Node score="0.15830883030731535">
+											<SimplePredicate field="latitude" operator="greaterThan" value="59.65"/>
+										</Node>
+									</Node>
+									<Node score="0.06130348140950173">
+										<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										<Node score="-0.07485329670772006">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.5539794973372325">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.19151903078125768">
+									<SimplePredicate field="longitude" operator="greaterThan" value="36.1667"/>
+									<Node score="-0.044002655336419685">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="55.77"/>
+										<Node score="-0.49882664471033683">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="0.04464546064289996">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+									<Node score="-0.3234421910238164">
+										<SimplePredicate field="latitude" operator="greaterThan" value="55.77"/>
+										<Node score="-0.018222254060814843">
+											<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										</Node>
+										<Node score="-0.4238170669233785">
+											<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="11">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="-8.510497521640449E-17">
+						<True/>
+						<Node score="0.014873209005663003">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="54.4667"/>
+							<Node score="-0.1274049945171647">
+								<SimplePredicate field="month" operator="lessOrEqual" value="1"/>
+								<Node score="0.023259116519516374">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="42.0628"/>
+									<Node score="-0.21324775043424773">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="37.2331"/>
+										<Node score="0.35766013851989625">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-112.73333"/>
+										</Node>
+										<Node score="-0.27907218713331305">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-112.73333"/>
+										</Node>
+									</Node>
+									<Node score="0.35640180309934855">
+										<SimplePredicate field="latitude" operator="greaterThan" value="37.2331"/>
+										<Node score="0.565779368413824">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="40.1636"/>
+										</Node>
+										<Node score="0.059866138839466766">
+											<SimplePredicate field="latitude" operator="greaterThan" value="40.1636"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.339878330105541">
+									<SimplePredicate field="latitude" operator="greaterThan" value="42.0628"/>
+									<Node score="-0.42372607420922215">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-65.6833"/>
+										<Node score="-0.19689392807255449">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-106.1276"/>
+										</Node>
+										<Node score="-0.5941424415853371">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-106.1276"/>
+										</Node>
+									</Node>
+									<Node score="0.07599334241242098">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-65.6833"/>
+										<Node score="0.40654286908161136">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="73.5831"/>
+										</Node>
+										<Node score="-0.9889941976732383">
+											<SimplePredicate field="longitude" operator="greaterThan" value="73.5831"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.02764782371828243">
+								<SimplePredicate field="month" operator="greaterThan" value="1"/>
+								<Node score="-0.012994993767708211">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="41.4175"/>
+									<Node score="0.06379597081395404">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="38.784"/>
+										<Node score="-0.039619941935326766">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-100.927"/>
+										</Node>
+										<Node score="0.10270037047818359">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-100.927"/>
+										</Node>
+									</Node>
+									<Node score="-0.23252964959092842">
+										<SimplePredicate field="latitude" operator="greaterThan" value="38.784"/>
+										<Node score="-0.3753250225070087">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.41909292891981753">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.07763428082849652">
+									<SimplePredicate field="latitude" operator="greaterThan" value="41.4175"/>
+									<Node score="0.12933885730442435">
+										<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										<Node score="0.022693647369139675">
+											<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+										</Node>
+										<Node score="0.26297279830718406">
+											<SimplePredicate field="month" operator="greaterThan" value="6"/>
+										</Node>
+									</Node>
+									<Node score="-0.16084960189929332">
+										<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										<Node score="-0.261653029196528">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="50.1"/>
+										</Node>
+										<Node score="0.4448121848959308">
+											<SimplePredicate field="latitude" operator="greaterThan" value="50.1"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-0.1368862391111819">
+							<SimplePredicate field="latitude" operator="greaterThan" value="54.4667"/>
+							<Node score="-0.30171754506591125">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="2.7367"/>
+								<Node score="-0.10158677182327068">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-124.5011"/>
+									<Node score="0.18288611235925628">
+										<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+										<Node score="0.6812147927321878">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="58.7"/>
+										</Node>
+										<Node score="0.03928853400385303">
+											<SimplePredicate field="latitude" operator="greaterThan" value="58.7"/>
+										</Node>
+									</Node>
+									<Node score="-0.24268703351650367">
+										<SimplePredicate field="month" operator="greaterThan" value="4"/>
+										<Node score="-0.6001520631363196">
+											<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+										</Node>
+										<Node score="-0.19173007391866317">
+											<SimplePredicate field="month" operator="greaterThan" value="5"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.5794520591305484">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-124.5011"/>
+									<Node score="-0.5315398358491378">
+										<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										<Node score="-0.7100157466228303">
+											<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+										</Node>
+										<Node score="-0.4010049463248315">
+											<SimplePredicate field="month" operator="greaterThan" value="5"/>
+										</Node>
+									</Node>
+									<Node score="-1.1937972826298249">
+										<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										<Node score="-1.5634260486285878">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-65.6833"/>
+										</Node>
+										<Node score="0.07798118954188436">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-65.6833"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.04721855463474916">
+								<SimplePredicate field="longitude" operator="greaterThan" value="2.7367"/>
+								<Node score="0.05532103249725844">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="31.6"/>
+									<Node score="-0.008212814830175936">
+										<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										<Node score="0.25505469783484835">
+											<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+										</Node>
+										<Node score="-0.18560915766284602">
+											<SimplePredicate field="month" operator="greaterThan" value="4"/>
+										</Node>
+									</Node>
+									<Node score="0.37484308395211896">
+										<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										<Node score="0.746227446120997">
+											<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										</Node>
+										<Node score="0.0017389154416320167">
+											<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.22018906499133317">
+									<SimplePredicate field="longitude" operator="greaterThan" value="31.6"/>
+									<Node score="-0.17872906364822172">
+										<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										<Node score="-0.25378731512030245">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.5911357253579616">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+									<Node score="-0.690351652728217">
+										<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										<Node score="-0.8241735154072485">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="142.583"/>
+										</Node>
+										<Node score="0.11974284841948522">
+											<SimplePredicate field="longitude" operator="greaterThan" value="142.583"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="12">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="year"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="-1.723645067674015E-17">
+						<True/>
+						<Node score="0.024804893037328458">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="46.7953"/>
+							<Node score="-0.05455246232570435">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="-103.3611"/>
+								<Node score="0.034389931458870024">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-111.05"/>
+									<Node score="0.19580996079535173">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="37.1542"/>
+										<Node score="-0.08879608417333683">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-120.0828"/>
+										</Node>
+										<Node score="0.2879726489330185">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-120.0828"/>
+										</Node>
+									</Node>
+									<Node score="-0.03109993012300621">
+										<SimplePredicate field="latitude" operator="greaterThan" value="37.1542"/>
+										<Node score="-0.08889530012813371">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.26249044257678306">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.2141499195952335">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-111.05"/>
+									<Node score="-0.3202737960910695">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="41.3136"/>
+										<Node score="-6.703514802383969E-4">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="32.5905"/>
+										</Node>
+										<Node score="-0.38750866914817467">
+											<SimplePredicate field="latitude" operator="greaterThan" value="32.5905"/>
+										</Node>
+									</Node>
+									<Node score="0.02678148707552315">
+										<SimplePredicate field="latitude" operator="greaterThan" value="41.3136"/>
+										<Node score="-0.2586312570854322">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-108.4597"/>
+										</Node>
+										<Node score="0.20698965109847564">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-108.4597"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.055361033844900966">
+								<SimplePredicate field="longitude" operator="greaterThan" value="-103.3611"/>
+								<Node score="0.07615511339889085">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="81.95"/>
+									<Node score="0.05361799162656586">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-62.6667"/>
+										<Node score="0.26505223859460586">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="30.793"/>
+										</Node>
+										<Node score="0.02995861853650671">
+											<SimplePredicate field="latitude" operator="greaterThan" value="30.793"/>
+										</Node>
+									</Node>
+									<Node score="0.29840412391037563">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-62.6667"/>
+										<Node score="-0.1414562859573378">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="16.667"/>
+										</Node>
+										<Node score="0.4361728904597597">
+											<SimplePredicate field="latitude" operator="greaterThan" value="16.667"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.08059597332283149">
+									<SimplePredicate field="longitude" operator="greaterThan" value="81.95"/>
+									<Node score="0.004664180781820493">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="27.5311"/>
+										<Node score="0.1714442213105162">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="143.3747"/>
+										</Node>
+										<Node score="-0.16822164652233862">
+											<SimplePredicate field="longitude" operator="greaterThan" value="143.3747"/>
+										</Node>
+									</Node>
+									<Node score="-0.3338315007861215">
+										<SimplePredicate field="latitude" operator="greaterThan" value="27.5311"/>
+										<Node score="-0.5866999693647766">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="119.3281"/>
+										</Node>
+										<Node score="-0.13777005649277715">
+											<SimplePredicate field="longitude" operator="greaterThan" value="119.3281"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-0.07201437206389495">
+							<SimplePredicate field="latitude" operator="greaterThan" value="46.7953"/>
+							<Node score="-0.11715325523204943">
+								<SimplePredicate field="year" operator="lessOrEqual" value="1996"/>
+								<Node score="-0.09316943720842816">
+									<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+									<Node score="-0.3845682708684355">
+										<SimplePredicate field="month" operator="lessOrEqual" value="1"/>
+										<Node score="-0.41002434248512065">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="143.3747"/>
+										</Node>
+										<Node score="1.180718598575333">
+											<SimplePredicate field="longitude" operator="greaterThan" value="143.3747"/>
+										</Node>
+									</Node>
+									<Node score="-0.06518122179196408">
+										<SimplePredicate field="month" operator="greaterThan" value="1"/>
+										<Node score="0.07861261275770744">
+											<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										</Node>
+										<Node score="-0.10004909789785535">
+											<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.3894678846127394">
+									<SimplePredicate field="month" operator="greaterThan" value="11"/>
+									<Node score="0.13859703234740858">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-117.7201"/>
+										<Node score="0.46735450501771947">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="59.22"/>
+										</Node>
+										<Node score="-0.8889982959198282">
+											<SimplePredicate field="latitude" operator="greaterThan" value="59.22"/>
+										</Node>
+									</Node>
+									<Node score="-0.5388794059436657">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-117.7201"/>
+										<Node score="-0.9046499883844819">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-62.6667"/>
+										</Node>
+										<Node score="-0.20355019589389226">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-62.6667"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.054156065698480166">
+								<SimplePredicate field="year" operator="greaterThan" value="1996"/>
+								<Node score="0.21692865263061406">
+									<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+									<Node score="0.07027548025550964">
+										<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										<Node score="0.11663346122474064">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="33.4797"/>
+										</Node>
+										<Node score="-0.24340131809910592">
+											<SimplePredicate field="longitude" operator="greaterThan" value="33.4797"/>
+										</Node>
+									</Node>
+									<Node score="0.506531730418291">
+										<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										<Node score="0.11157470007133743">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="49.9167"/>
+										</Node>
+										<Node score="0.7047692979295633">
+											<SimplePredicate field="latitude" operator="greaterThan" value="49.9167"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-6.099949758474896E-4">
+									<SimplePredicate field="month" operator="greaterThan" value="3"/>
+									<Node score="-0.16742572736189856">
+										<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+										<Node score="0.08194081743621692">
+											<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+										</Node>
+										<Node score="-0.41587279074243705">
+											<SimplePredicate field="month" operator="greaterThan" value="4"/>
+										</Node>
+									</Node>
+									<Node score="0.048970810308720046">
+										<SimplePredicate field="month" operator="greaterThan" value="5"/>
+										<Node score="0.14678899177917856">
+											<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										</Node>
+										<Node score="-0.028110516890794364">
+											<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="13">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="year"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="-3.3395623186184037E-17">
+						<True/>
+						<Node score="0.025480097634749666">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="44.8405"/>
+							<Node score="-0.08066594109577883">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="-105.59972"/>
+								<Node score="-0.01762158426826979">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-108.3742"/>
+									<Node score="0.15034935628834456">
+										<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										<Node score="0.22537243972214227">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="40.8619"/>
+										</Node>
+										<Node score="-0.004914511364512354">
+											<SimplePredicate field="latitude" operator="greaterThan" value="40.8619"/>
+										</Node>
+									</Node>
+									<Node score="-0.07385579034025846">
+										<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										<Node score="-0.14752488506445502">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.18771792762080322">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.42361027820951275">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-108.3742"/>
+									<Node score="-0.5029173501390984">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="41.56667"/>
+										<Node score="-0.2055054354095014">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="35.53333"/>
+										</Node>
+										<Node score="-0.6472933968920058">
+											<SimplePredicate field="latitude" operator="greaterThan" value="35.53333"/>
+										</Node>
+									</Node>
+									<Node score="0.01407642555674148">
+										<SimplePredicate field="latitude" operator="greaterThan" value="41.56667"/>
+										<Node score="0.10867630286400956">
+											<SimplePredicate field="year" operator="lessOrEqual" value="1989"/>
+										</Node>
+										<Node score="-0.11110041855083419">
+											<SimplePredicate field="year" operator="greaterThan" value="1989"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.058600459314752454">
+								<SimplePredicate field="longitude" operator="greaterThan" value="-105.59972"/>
+								<Node score="0.024283946249672103">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="41.56667"/>
+									<Node score="-0.011784851377673381">
+										<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										<Node score="0.05511853286246332">
+											<SimplePredicate field="month" operator="lessOrEqual" value="9"/>
+										</Node>
+										<Node score="-0.6172745804363846">
+											<SimplePredicate field="month" operator="greaterThan" value="9"/>
+										</Node>
+									</Node>
+									<Node score="0.20727806844642577">
+										<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										<Node score="-0.06359062674360683">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="36.3906"/>
+										</Node>
+										<Node score="0.5925933612664441">
+											<SimplePredicate field="latitude" operator="greaterThan" value="36.3906"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.1760552627485357">
+									<SimplePredicate field="latitude" operator="greaterThan" value="41.56667"/>
+									<Node score="-0.07750298874832263">
+										<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										<Node score="-0.14663740092124142">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-60.0167"/>
+										</Node>
+										<Node score="0.5343910743697856">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-60.0167"/>
+										</Node>
+									</Node>
+									<Node score="0.2604369221168827">
+										<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										<Node score="0.3539498720230414">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="-0.0715885557772248">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-0.04906426678187465">
+							<SimplePredicate field="latitude" operator="greaterThan" value="44.8405"/>
+							<Node score="-0.02894751853102618">
+								<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+								<Node score="-0.1801500780013258">
+									<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+									<Node score="-0.2813634536373921">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-60.0167"/>
+										<Node score="-0.024015833633278985">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-108.3742"/>
+										</Node>
+										<Node score="-0.5500852842581597">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-108.3742"/>
+										</Node>
+									</Node>
+									<Node score="0.03026620186106398">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-60.0167"/>
+										<Node score="0.4622764538458666">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="16.69"/>
+										</Node>
+										<Node score="-0.23845673817363996">
+											<SimplePredicate field="longitude" operator="greaterThan" value="16.69"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.00391316643278267">
+									<SimplePredicate field="month" operator="greaterThan" value="2"/>
+									<Node score="0.2599304583522631">
+										<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										<Node score="-0.014515970450883204">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="50.2"/>
+										</Node>
+										<Node score="0.5951098734135337">
+											<SimplePredicate field="latitude" operator="greaterThan" value="50.2"/>
+										</Node>
+									</Node>
+									<Node score="-0.02764967998561846">
+										<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										<Node score="-0.18445160244472883">
+											<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+										</Node>
+										<Node score="0.024911675350950208">
+											<SimplePredicate field="month" operator="greaterThan" value="5"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.27815491932555636">
+								<SimplePredicate field="month" operator="greaterThan" value="11"/>
+								<Node score="0.15154547399527127">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-115.0667"/>
+									<Node score="0.3486997379057011">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="59.3831"/>
+										<Node score="0.7376380186318698">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-122.06"/>
+										</Node>
+										<Node score="0.06867241188068367">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-122.06"/>
+										</Node>
+									</Node>
+									<Node score="-0.6529886483790106">
+										<SimplePredicate field="latitude" operator="greaterThan" value="59.3831"/>
+										<Node score="-0.35126460064498677">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="63.685"/>
+										</Node>
+										<Node score="-1.0433272331796055">
+											<SimplePredicate field="latitude" operator="greaterThan" value="63.685"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.41698826983951937">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-115.0667"/>
+									<Node score="-0.7060791030331564">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-70.9125"/>
+										<Node score="-0.32059948724990106">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-108.3742"/>
+										</Node>
+										<Node score="-0.8471593396061494">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-108.3742"/>
+										</Node>
+									</Node>
+									<Node score="-0.13729890819034876">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-70.9125"/>
+										<Node score="0.046490464264940294">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="33"/>
+										</Node>
+										<Node score="-0.5230104771600211">
+											<SimplePredicate field="longitude" operator="greaterThan" value="33"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="14">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="2.800923234970274E-17">
+						<True/>
+						<Node score="0.010618936407755708">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="55.0125"/>
+							<Node score="-0.025093979212442486">
+								<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+								<Node score="0.014288227591115046">
+									<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+									<Node score="0.17936432816355757">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-112.58278"/>
+										<Node score="-0.005564891688888261">
+											<SimplePredicate field="month" operator="lessOrEqual" value="1"/>
+										</Node>
+										<Node score="0.24032027456784386">
+											<SimplePredicate field="month" operator="greaterThan" value="1"/>
+										</Node>
+									</Node>
+									<Node score="-0.022116174515389758">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-112.58278"/>
+										<Node score="0.02290500181028497">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="42.7325"/>
+										</Node>
+										<Node score="-0.10777710130648362">
+											<SimplePredicate field="latitude" operator="greaterThan" value="42.7325"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.1810748624581665">
+									<SimplePredicate field="month" operator="greaterThan" value="4"/>
+									<Node score="0.07949816867878984">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="33.6774"/>
+										<Node score="0.12741235958251565">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="142.4814"/>
+										</Node>
+										<Node score="-0.20383187012697093">
+											<SimplePredicate field="longitude" operator="greaterThan" value="142.4814"/>
+										</Node>
+									</Node>
+									<Node score="-0.24753607264132108">
+										<SimplePredicate field="latitude" operator="greaterThan" value="33.6774"/>
+										<Node score="-0.38613466460554435">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-103.2683"/>
+										</Node>
+										<Node score="-0.1702030021359653">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-103.2683"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.036241523638028794">
+								<SimplePredicate field="month" operator="greaterThan" value="5"/>
+								<Node score="0.11967080156805561">
+									<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+									<Node score="-0.2152887107059671">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="16.68333"/>
+										<Node score="-0.1295100007303397">
+											<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+										</Node>
+										<Node score="-0.25800810086382253">
+											<SimplePredicate field="month" operator="greaterThan" value="6"/>
+										</Node>
+									</Node>
+									<Node score="0.14362939918334502">
+										<SimplePredicate field="latitude" operator="greaterThan" value="16.68333"/>
+										<Node score="0.36145989762330194">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="33.6774"/>
+										</Node>
+										<Node score="0.10646093186063228">
+											<SimplePredicate field="latitude" operator="greaterThan" value="33.6774"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.02723192648647827">
+									<SimplePredicate field="month" operator="greaterThan" value="8"/>
+									<Node score="0.13855275928990624">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="33.6774"/>
+										<Node score="0.2845213223197266">
+											<SimplePredicate field="month" operator="lessOrEqual" value="9"/>
+										</Node>
+										<Node score="0.08938799560476161">
+											<SimplePredicate field="month" operator="greaterThan" value="9"/>
+										</Node>
+									</Node>
+									<Node score="-0.07000346875531584">
+										<SimplePredicate field="latitude" operator="greaterThan" value="33.6774"/>
+										<Node score="-0.17950610038806047">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.041259231996635094">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-0.10246085171082947">
+							<SimplePredicate field="latitude" operator="greaterThan" value="55.0125"/>
+							<Node score="-0.23314759515204875">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="-63.2333"/>
+								<Node score="-0.07751643923412499">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-124.2667"/>
+									<Node score="0.10937101571623771">
+										<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+										<Node score="0.49718487082284074">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="59.26667"/>
+										</Node>
+										<Node score="0.0034022859563781643">
+											<SimplePredicate field="latitude" operator="greaterThan" value="59.26667"/>
+										</Node>
+									</Node>
+									<Node score="-0.17016105989859454">
+										<SimplePredicate field="month" operator="greaterThan" value="4"/>
+										<Node score="-0.23759481416102357">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.03604687088314387">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.5172580352465764">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-124.2667"/>
+									<Node score="-0.3822167604938439">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-108.05"/>
+										<Node score="-1.1153424855192215">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="-0.26850228771397044">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+									<Node score="-0.7316694201126313">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-108.05"/>
+										<Node score="-0.8988035613016087">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-85.2891"/>
+										</Node>
+										<Node score="-0.494859806596499">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-85.2891"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.04062569105797988">
+								<SimplePredicate field="longitude" operator="greaterThan" value="-63.2333"/>
+								<Node score="-0.08996868692135947">
+									<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+									<Node score="-0.00889267623770792">
+										<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										<Node score="0.08729145063405241">
+											<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+										</Node>
+										<Node score="-0.10484631664594544">
+											<SimplePredicate field="month" operator="greaterThan" value="4"/>
+										</Node>
+									</Node>
+									<Node score="-0.4167416503761381">
+										<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										<Node score="-0.28234338344180676">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="73.333"/>
+										</Node>
+										<Node score="-0.9454471094856338">
+											<SimplePredicate field="longitude" operator="greaterThan" value="73.333"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.20953186329853624">
+									<SimplePredicate field="month" operator="greaterThan" value="10"/>
+									<Node score="0.5541537904340442">
+										<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										<Node score="0.9322438871717669">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="59.26667"/>
+										</Node>
+										<Node score="0.37826668633558347">
+											<SimplePredicate field="latitude" operator="greaterThan" value="59.26667"/>
+										</Node>
+									</Node>
+									<Node score="-0.13699011581290838">
+										<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										<Node score="0.29378847813078607">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="16.13"/>
+										</Node>
+										<Node score="-0.31303542540102014">
+											<SimplePredicate field="longitude" operator="greaterThan" value="16.13"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="15">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="year"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="7.540947171073814E-17">
+						<True/>
+						<Node score="-0.2036099632624041">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="-31.9275"/>
+							<Node score="-1.044752764934878">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="79.933"/>
+								<Node score="-0.7239928498372318">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="31.6"/>
+									<Node score="-3.6035836894504523">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-74.68278"/>
+										<Node score="-1.5666540743622337">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-126.9333"/>
+										</Node>
+										<Node score="-8.361543809222555">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-126.9333"/>
+										</Node>
+									</Node>
+									<Node score="-0.5692476642920593">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-74.68278"/>
+										<Node score="-0.8730435716322655">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="16.29"/>
+										</Node>
+										<Node score="0.34376740371382414">
+											<SimplePredicate field="longitude" operator="greaterThan" value="16.29"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-4.193140289455037">
+									<SimplePredicate field="longitude" operator="greaterThan" value="31.6"/>
+									<Node score="-4.481627561000544">
+										<SimplePredicate field="year" operator="lessOrEqual" value="2000"/>
+										<Node score="-5.116551282867264">
+											<SimplePredicate field="year" operator="lessOrEqual" value="1970"/>
+										</Node>
+										<Node score="-4.190494758123622">
+											<SimplePredicate field="year" operator="greaterThan" value="1970"/>
+										</Node>
+									</Node>
+									<Node score="-2.322862639181163">
+										<SimplePredicate field="year" operator="greaterThan" value="2000"/>
+										<Node score="-2.1173490161643813">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="-3.0500646898559527">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.14233678434575953">
+								<SimplePredicate field="longitude" operator="greaterThan" value="79.933"/>
+								<Node score="-0.3302009754997746">
+									<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+									<Node score="-0.13126461985503704">
+										<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										<Node score="0.0023766955365285346">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="-0.39883736791639146">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+									<Node score="-0.9361011463670987">
+										<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										<Node score="-0.8122124956711883">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="145.0453"/>
+										</Node>
+										<Node score="-1.046478775552965">
+											<SimplePredicate field="longitude" operator="greaterThan" value="145.0453"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.047148115431147546">
+									<SimplePredicate field="month" operator="greaterThan" value="4"/>
+									<Node score="0.010888364957004838">
+										<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										<Node score="-0.08827174595973979">
+											<SimplePredicate field="month" operator="lessOrEqual" value="9"/>
+										</Node>
+										<Node score="0.5087732290538669">
+											<SimplePredicate field="month" operator="greaterThan" value="9"/>
+										</Node>
+									</Node>
+									<Node score="-0.22180310272034817">
+										<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										<Node score="-0.431088237237564">
+											<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										</Node>
+										<Node score="-0.007106347922033733">
+											<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="0.005441783353168249">
+							<SimplePredicate field="latitude" operator="greaterThan" value="-31.9275"/>
+							<Node score="0.12498298437582618">
+								<SimplePredicate field="latitude" operator="lessOrEqual" value="30.6908"/>
+								<Node score="-0.03653556842314056">
+									<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+									<Node score="-0.13611922042392657">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="27.7895"/>
+										<Node score="-0.45478593065153927">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-96.80472"/>
+										</Node>
+										<Node score="-0.04702117799772661">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-96.80472"/>
+										</Node>
+									</Node>
+									<Node score="0.19725442540873592">
+										<SimplePredicate field="latitude" operator="greaterThan" value="27.7895"/>
+										<Node score="0.2529583645203175">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="79.933"/>
+										</Node>
+										<Node score="-0.8162684415678583">
+											<SimplePredicate field="longitude" operator="greaterThan" value="79.933"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.17932685076966715">
+									<SimplePredicate field="month" operator="greaterThan" value="3"/>
+									<Node score="-0.050572585956369626">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-100.86667"/>
+										<Node score="0.0963947169690396">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="-0.5766591150438156">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+									<Node score="0.2154674538439863">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-100.86667"/>
+										<Node score="0.25452218476601535">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="145.0453"/>
+										</Node>
+										<Node score="-0.05188614225644375">
+											<SimplePredicate field="longitude" operator="greaterThan" value="145.0453"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.007303847085892265">
+								<SimplePredicate field="latitude" operator="greaterThan" value="30.6908"/>
+								<Node score="0.0013583433089805691">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="79.933"/>
+									<Node score="-0.01772163821126667">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-63.5833"/>
+										<Node score="-0.006053688364046897">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="52.2094"/>
+										</Node>
+										<Node score="-0.1872351778192252">
+											<SimplePredicate field="latitude" operator="greaterThan" value="52.2094"/>
+										</Node>
+									</Node>
+									<Node score="0.12436395561069663">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-63.5833"/>
+										<Node score="0.23532771195730537">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="55.1833"/>
+										</Node>
+										<Node score="-0.0075187849733163534">
+											<SimplePredicate field="latitude" operator="greaterThan" value="55.1833"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.19556855622837047">
+									<SimplePredicate field="longitude" operator="greaterThan" value="79.933"/>
+									<Node score="-0.33661628470591154">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="50.1"/>
+										<Node score="-0.7695985964157364">
+											<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										</Node>
+										<Node score="-0.19193629189742756">
+											<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										</Node>
+									</Node>
+									<Node score="-0.05378054571163671">
+										<SimplePredicate field="latitude" operator="greaterThan" value="50.1"/>
+										<Node score="0.4970096141225662">
+											<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										</Node>
+										<Node score="-0.23576980798898506">
+											<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="16">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="year"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="1.400461617485137E-16">
+						<True/>
+						<Node score="-0.017230266255535014">
+							<SimplePredicate field="year" operator="lessOrEqual" value="1997"/>
+							<Node score="-0.13725145841713068">
+								<SimplePredicate field="month" operator="lessOrEqual" value="1"/>
+								<Node score="-0.014637514199122174">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="41.63333"/>
+									<Node score="-0.19118606539491678">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="37.55"/>
+										<Node score="0.19720840288735395">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-112.61667"/>
+										</Node>
+										<Node score="-0.23558325943881708">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-112.61667"/>
+										</Node>
+									</Node>
+									<Node score="0.28458246963086176">
+										<SimplePredicate field="latitude" operator="greaterThan" value="37.55"/>
+										<Node score="0.1388913675255761">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-83.4289"/>
+										</Node>
+										<Node score="0.5544266040685643">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-83.4289"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.26408351305863625">
+									<SimplePredicate field="latitude" operator="greaterThan" value="41.63333"/>
+									<Node score="-0.34483359769687505">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-71.3"/>
+										<Node score="0.03259276839776287">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-122.0388"/>
+										</Node>
+										<Node score="-0.4072786218572915">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-122.0388"/>
+										</Node>
+									</Node>
+									<Node score="-0.08511387063058826">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-71.3"/>
+										<Node score="0.12823215302474564">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="31.85"/>
+										</Node>
+										<Node score="-0.5105099377315074">
+											<SimplePredicate field="longitude" operator="greaterThan" value="31.85"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.006561730115617974">
+								<SimplePredicate field="month" operator="greaterThan" value="1"/>
+								<Node score="-2.0633446753600846E-4">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="63.595"/>
+									<Node score="-0.18397435275075572">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="-28.7551"/>
+										<Node score="-0.7447562496539922">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="71.75"/>
+										</Node>
+										<Node score="-0.13382493609735432">
+											<SimplePredicate field="longitude" operator="greaterThan" value="71.75"/>
+										</Node>
+									</Node>
+									<Node score="0.005589883186302703">
+										<SimplePredicate field="latitude" operator="greaterThan" value="-28.7551"/>
+										<Node score="0.03189819238350538">
+											<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										</Node>
+										<Node score="-0.04089632745870413">
+											<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.2330936521455346">
+									<SimplePredicate field="latitude" operator="greaterThan" value="63.595"/>
+									<Node score="-0.12113829471162788">
+										<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										<Node score="-0.20980448804639262">
+											<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+										</Node>
+										<Node score="0.09853722767121106">
+											<SimplePredicate field="month" operator="greaterThan" value="6"/>
+										</Node>
+									</Node>
+									<Node score="-0.428600596229963">
+										<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										<Node score="-0.6595637313666911">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-77.5386"/>
+										</Node>
+										<Node score="-0.3451136194086462">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-77.5386"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="0.05255355613982966">
+							<SimplePredicate field="year" operator="greaterThan" value="1997"/>
+							<Node score="-0.03967283126328134">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="-103.6344"/>
+								<Node score="0.17541461332130598">
+									<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+									<Node score="0.1306176653797534">
+										<SimplePredicate field="year" operator="lessOrEqual" value="2014"/>
+										<Node score="0.28604190922798983">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-122.0388"/>
+										</Node>
+										<Node score="0.08973323044820677">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-122.0388"/>
+										</Node>
+									</Node>
+									<Node score="0.4359630776709109">
+										<SimplePredicate field="year" operator="greaterThan" value="2014"/>
+										<Node score="0.16444272602883978">
+											<SimplePredicate field="month" operator="lessOrEqual" value="1"/>
+										</Node>
+										<Node score="0.5715753294046383">
+											<SimplePredicate field="month" operator="greaterThan" value="1"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.11307957593416318">
+									<SimplePredicate field="month" operator="greaterThan" value="3"/>
+									<Node score="-0.26896659801064476">
+										<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+										<Node score="-0.3807458876918559">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="45.5433"/>
+										</Node>
+										<Node score="-0.08365537827627278">
+											<SimplePredicate field="latitude" operator="greaterThan" value="45.5433"/>
+										</Node>
+									</Node>
+									<Node score="-0.03272387989039566">
+										<SimplePredicate field="month" operator="greaterThan" value="6"/>
+										<Node score="0.19483570839098832">
+											<SimplePredicate field="month" operator="lessOrEqual" value="7"/>
+										</Node>
+										<Node score="-0.0791169125113314">
+											<SimplePredicate field="month" operator="greaterThan" value="7"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.10425630142345209">
+								<SimplePredicate field="longitude" operator="greaterThan" value="-103.6344"/>
+								<Node score="0.08970882951886139">
+									<SimplePredicate field="year" operator="lessOrEqual" value="2014"/>
+									<Node score="-0.03784205208514069">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="-28.7551"/>
+										<Node score="-1.1123744499062078">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="16.66"/>
+										</Node>
+										<Node score="-0.015335763366113662">
+											<SimplePredicate field="longitude" operator="greaterThan" value="16.66"/>
+										</Node>
+									</Node>
+									<Node score="0.09879851312857257">
+										<SimplePredicate field="latitude" operator="greaterThan" value="-28.7551"/>
+										<Node score="0.2177928979632876">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="31.2"/>
+										</Node>
+										<Node score="0.07966019965269973">
+											<SimplePredicate field="latitude" operator="greaterThan" value="31.2"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.22750550348716267">
+									<SimplePredicate field="year" operator="greaterThan" value="2014"/>
+									<Node score="0.18339263130324418">
+										<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										<Node score="-0.015254932448992065">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="-28.7551"/>
+										</Node>
+										<Node score="0.19801615242692538">
+											<SimplePredicate field="latitude" operator="greaterThan" value="-28.7551"/>
+										</Node>
+									</Node>
+									<Node score="0.5067490850201509">
+										<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										<Node score="0.1920377850076566">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-96.8541"/>
+										</Node>
+										<Node score="0.5604627660625038">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-96.8541"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="17">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="1.1257556848245909E-16">
+						<True/>
+						<Node score="-0.025990762920797595">
+							<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+							<Node score="0.012386530116938098">
+								<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+								<Node score="-0.12118686669553042">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="33.7086"/>
+									<Node score="-0.01953386929947284">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="31.1681"/>
+										<Node score="-0.1805339410959566">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="-28.8353"/>
+										</Node>
+										<Node score="0.036391056790768726">
+											<SimplePredicate field="latitude" operator="greaterThan" value="-28.8353"/>
+										</Node>
+									</Node>
+									<Node score="-0.3394368223070907">
+										<SimplePredicate field="latitude" operator="greaterThan" value="31.1681"/>
+										<Node score="-0.019503510513795914">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-111.1494"/>
+										</Node>
+										<Node score="-0.3942193247227732">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-111.1494"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.0431745200829076">
+									<SimplePredicate field="latitude" operator="greaterThan" value="33.7086"/>
+									<Node score="0.15700360667911262">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="40.15"/>
+										<Node score="0.29950280563004655">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="0.015499433648665913">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+									<Node score="-0.007400792898516612">
+										<SimplePredicate field="latitude" operator="greaterThan" value="40.15"/>
+										<Node score="-0.05205829981234433">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-63.1667"/>
+										</Node>
+										<Node score="0.14119677058907268">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-63.1667"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.10185959383364945">
+								<SimplePredicate field="month" operator="greaterThan" value="4"/>
+								<Node score="0.04362641749736303">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="36.465"/>
+									<Node score="-0.23403623057539238">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-115.1853"/>
+										<Node score="-0.3420483342749894">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="34.6427"/>
+										</Node>
+										<Node score="0.06980681575961355">
+											<SimplePredicate field="latitude" operator="greaterThan" value="34.6427"/>
+										</Node>
+									</Node>
+									<Node score="0.06820374920194103">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-115.1853"/>
+										<Node score="0.1724664627777982">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-87.9859"/>
+										</Node>
+										<Node score="-0.016473841487361574">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-87.9859"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.15840892842811302">
+									<SimplePredicate field="latitude" operator="greaterThan" value="36.465"/>
+									<Node score="-0.3487819594739379">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="41.46528"/>
+										<Node score="-0.5414937575117617">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-102.99556"/>
+										</Node>
+										<Node score="-0.25399911815639536">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-102.99556"/>
+										</Node>
+									</Node>
+									<Node score="-0.07670289213341823">
+										<SimplePredicate field="latitude" operator="greaterThan" value="41.46528"/>
+										<Node score="-0.19581219348423398">
+											<SimplePredicate field="month" operator="lessOrEqual" value="5"/>
+										</Node>
+										<Node score="0.042140044094907306">
+											<SimplePredicate field="month" operator="greaterThan" value="5"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="0.026158366026529014">
+							<SimplePredicate field="month" operator="greaterThan" value="6"/>
+							<Node score="0.2001449479953885">
+								<SimplePredicate field="month" operator="lessOrEqual" value="7"/>
+								<Node score="-0.27467094878130294">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="17.9783"/>
+									<Node score="-0.08074387544031807">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="16.59"/>
+										<Node score="-1.111918848130085">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="-28.8353"/>
+										</Node>
+										<Node score="0.1782042369922546">
+											<SimplePredicate field="latitude" operator="greaterThan" value="-28.8353"/>
+										</Node>
+									</Node>
+									<Node score="-0.30220755244219877">
+										<SimplePredicate field="longitude" operator="greaterThan" value="16.59"/>
+										<Node score="-0.7626895905191581">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="31.25"/>
+										</Node>
+										<Node score="-0.2797759013665416">
+											<SimplePredicate field="longitude" operator="greaterThan" value="31.25"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.23147005123306583">
+									<SimplePredicate field="latitude" operator="greaterThan" value="17.9783"/>
+									<Node score="-0.039466155453199744">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-119.8"/>
+										<Node score="-0.10333592711563651">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="59.85"/>
+										</Node>
+										<Node score="0.32167226099582424">
+											<SimplePredicate field="latitude" operator="greaterThan" value="59.85"/>
+										</Node>
+									</Node>
+									<Node score="0.2629884278777852">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-119.8"/>
+										<Node score="0.37208317510815575">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-87.9859"/>
+										</Node>
+										<Node score="0.1458673545504728">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-87.9859"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.009107430771109768">
+								<SimplePredicate field="month" operator="greaterThan" value="7"/>
+								<Node score="0.11079047346047313">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="33.7086"/>
+									<Node score="0.04505829382199372">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="28.6835"/>
+										<Node score="0.1738194959785648">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="-0.14895253349342188">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+									<Node score="0.18291847638264977">
+										<SimplePredicate field="latitude" operator="greaterThan" value="28.6835"/>
+										<Node score="0.34666518760646925">
+											<SimplePredicate field="month" operator="lessOrEqual" value="9"/>
+										</Node>
+										<Node score="0.07190471665253317">
+											<SimplePredicate field="month" operator="greaterThan" value="9"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.036567038655392924">
+									<SimplePredicate field="latitude" operator="greaterThan" value="33.7086"/>
+									<Node score="-0.12357877741840331">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="41.46528"/>
+										<Node score="-0.3528107288227223">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.22506906043333072">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+									<Node score="0.01799605648400304">
+										<SimplePredicate field="latitude" operator="greaterThan" value="41.46528"/>
+										<Node score="0.26680752865972396">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="43.45694"/>
+										</Node>
+										<Node score="-0.03920761248172371">
+											<SimplePredicate field="latitude" operator="greaterThan" value="43.45694"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="18">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="year"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="7.864130621262692E-17">
+						<True/>
+						<Node score="-0.08592747295951514">
+							<SimplePredicate field="month" operator="lessOrEqual" value="1"/>
+							<Node score="-0.1636394565386957">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="-87.88"/>
+								<Node score="-0.07162487929797849">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-103.23722"/>
+									<Node score="-0.19008171109534033">
+										<SimplePredicate field="year" operator="lessOrEqual" value="1980"/>
+										<Node score="-0.11609006563263247">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="48.9994"/>
+										</Node>
+										<Node score="-0.4464080250194269">
+											<SimplePredicate field="latitude" operator="greaterThan" value="48.9994"/>
+										</Node>
+									</Node>
+									<Node score="0.05390555225859196">
+										<SimplePredicate field="year" operator="greaterThan" value="1980"/>
+										<Node score="0.07593645019175724">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="59.66"/>
+										</Node>
+										<Node score="-0.29082814511924415">
+											<SimplePredicate field="latitude" operator="greaterThan" value="59.66"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.2948890547730451">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-103.23722"/>
+									<Node score="-0.17378009476987533">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="41.5239"/>
+										<Node score="-0.33615836090777823">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="37.3292"/>
+										</Node>
+										<Node score="0.12589725030437854">
+											<SimplePredicate field="latitude" operator="greaterThan" value="37.3292"/>
+										</Node>
+									</Node>
+									<Node score="-0.49442942458563294">
+										<SimplePredicate field="latitude" operator="greaterThan" value="41.5239"/>
+										<Node score="-0.6040721096264615">
+											<SimplePredicate field="year" operator="lessOrEqual" value="1980"/>
+										</Node>
+										<Node score="-0.33217470575950947">
+											<SimplePredicate field="year" operator="greaterThan" value="1980"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.003550164728935927">
+								<SimplePredicate field="longitude" operator="greaterThan" value="-87.88"/>
+								<Node score="0.07734180416231502">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="36"/>
+									<Node score="0.01180735607982477">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-61.6"/>
+										<Node score="0.09494778891691777">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="44.7894"/>
+										</Node>
+										<Node score="-0.33420287899522605">
+											<SimplePredicate field="latitude" operator="greaterThan" value="44.7894"/>
+										</Node>
+									</Node>
+									<Node score="0.24715306315523966">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-61.6"/>
+										<Node score="0.6375742181449908">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="7.8117"/>
+										</Node>
+										<Node score="0.057753111722480224">
+											<SimplePredicate field="longitude" operator="greaterThan" value="7.8117"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.209922977673876">
+									<SimplePredicate field="longitude" operator="greaterThan" value="36"/>
+									<Node score="0.1770008867466093">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="11.8"/>
+										<Node score="-1.0918706250752759">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="91.7"/>
+										</Node>
+										<Node score="0.22090575539115143">
+											<SimplePredicate field="longitude" operator="greaterThan" value="91.7"/>
+										</Node>
+									</Node>
+									<Node score="-0.485829499631506">
+										<SimplePredicate field="latitude" operator="greaterThan" value="11.8"/>
+										<Node score="-0.577930768972374">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="143.3437"/>
+										</Node>
+										<Node score="0.8541826917577228">
+											<SimplePredicate field="longitude" operator="greaterThan" value="143.3437"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="0.007698567630254354">
+							<SimplePredicate field="month" operator="greaterThan" value="1"/>
+							<Node score="0.10356027968817255">
+								<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+								<Node score="0.268805461137481">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="42.2123"/>
+									<Node score="0.004915633948262694">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="37.3292"/>
+										<Node score="0.421443828840377">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-112.7403"/>
+										</Node>
+										<Node score="-0.04303792995505751">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-112.7403"/>
+										</Node>
+									</Node>
+									<Node score="0.6450065367232538">
+										<SimplePredicate field="latitude" operator="greaterThan" value="37.3292"/>
+										<Node score="0.792758801712878">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="40.87306"/>
+										</Node>
+										<Node score="0.2565516290395502">
+											<SimplePredicate field="latitude" operator="greaterThan" value="40.87306"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.08773926425478704">
+									<SimplePredicate field="latitude" operator="greaterThan" value="42.2123"/>
+									<Node score="-0.18994225829406738">
+										<SimplePredicate field="year" operator="lessOrEqual" value="1980"/>
+										<Node score="-0.20117009823386967">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="143.3437"/>
+										</Node>
+										<Node score="1.0235306337920276">
+											<SimplePredicate field="longitude" operator="greaterThan" value="143.3437"/>
+										</Node>
+									</Node>
+									<Node score="0.032444614160485996">
+										<SimplePredicate field="year" operator="greaterThan" value="1980"/>
+										<Node score="0.4489014539998941">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-125.5333"/>
+										</Node>
+										<Node score="0.006028305948124767">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-125.5333"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.0019062141468839757">
+								<SimplePredicate field="month" operator="greaterThan" value="2"/>
+								<Node score="-0.046414504152917896">
+									<SimplePredicate field="latitude" operator="lessOrEqual" value="41.5239"/>
+									<Node score="0.018194896859862926">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="38.933"/>
+										<Node score="-0.007944783858216472">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.1244029625499429">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+									<Node score="-0.23814648230051563">
+										<SimplePredicate field="latitude" operator="greaterThan" value="38.933"/>
+										<Node score="-0.3397101118376042">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.17364852543412743">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.04287949762921889">
+									<SimplePredicate field="latitude" operator="greaterThan" value="41.5239"/>
+									<Node score="0.21681025914688146">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="43.48333"/>
+										<Node score="0.2741948047314675">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="-0.016038327146111055">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+									<Node score="0.0036351147314359422">
+										<SimplePredicate field="latitude" operator="greaterThan" value="43.48333"/>
+										<Node score="0.02708216352449376">
+											<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										</Node>
+										<Node score="-0.21486705390472804">
+											<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="19">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="year"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="1.1311420756610722E-16">
+						<True/>
+						<Node score="0.006232476617935176">
+							<SimplePredicate field="latitude" operator="lessOrEqual" value="59.8206"/>
+							<Node score="0.15106846176985084">
+								<SimplePredicate field="longitude" operator="lessOrEqual" value="-122.1547"/>
+								<Node score="0.045144540720084114">
+									<SimplePredicate field="month" operator="lessOrEqual" value="9"/>
+									<Node score="0.4006218529686367">
+										<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+										<Node score="0.2593752072827255">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="50.2333"/>
+										</Node>
+										<Node score="0.8504290375568001">
+											<SimplePredicate field="latitude" operator="greaterThan" value="50.2333"/>
+										</Node>
+									</Node>
+									<Node score="-0.13310637351112659">
+										<SimplePredicate field="month" operator="greaterThan" value="3"/>
+										<Node score="-0.05140278544753112">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="50.2333"/>
+										</Node>
+										<Node score="-0.39417785078183054">
+											<SimplePredicate field="latitude" operator="greaterThan" value="50.2333"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.4723199332735837">
+									<SimplePredicate field="month" operator="greaterThan" value="9"/>
+									<Node score="-0.2950514710751197">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="28.9517"/>
+										<Node score="0.20287013898708417">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="-0.5483856040628519">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+									<Node score="0.5839450993620254">
+										<SimplePredicate field="latitude" operator="greaterThan" value="28.9517"/>
+										<Node score="0.34915453480998415">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.7018848722266415">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.0016285669656249634">
+								<SimplePredicate field="longitude" operator="greaterThan" value="-122.1547"/>
+								<Node score="0.01566020676411834">
+									<SimplePredicate field="month" operator="lessOrEqual" value="9"/>
+									<Node score="-0.024211655235296642">
+										<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+										<Node score="-0.014891182496535885">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="76.433"/>
+										</Node>
+										<Node score="-0.10911894011572494">
+											<SimplePredicate field="longitude" operator="greaterThan" value="76.433"/>
+										</Node>
+									</Node>
+									<Node score="0.09509337813815912">
+										<SimplePredicate field="month" operator="greaterThan" value="6"/>
+										<Node score="0.1785996210454567">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-85.2649"/>
+										</Node>
+										<Node score="-0.012362547790164047">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-85.2649"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.054463351636143964">
+									<SimplePredicate field="month" operator="greaterThan" value="9"/>
+									<Node score="-0.13322426148393138">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-77.0841"/>
+										<Node score="-0.29592033112156474">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="-0.051149456818203855">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+									<Node score="0.1285182703312565">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-77.0841"/>
+										<Node score="0.06021925013714874">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="50.2333"/>
+										</Node>
+										<Node score="0.4469900276434216">
+											<SimplePredicate field="latitude" operator="greaterThan" value="50.2333"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="-0.10003783406439326">
+							<SimplePredicate field="latitude" operator="greaterThan" value="59.8206"/>
+							<Node score="-0.17721826253349898">
+								<SimplePredicate field="year" operator="lessOrEqual" value="1988"/>
+								<Node score="-0.1543425462534117">
+									<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+									<Node score="-0.18233769872735422">
+										<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										<Node score="-0.12974349345568104">
+											<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+										</Node>
+										<Node score="-0.3909176158465534">
+											<SimplePredicate field="month" operator="greaterThan" value="8"/>
+										</Node>
+									</Node>
+									<Node score="0.12461559277449807">
+										<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										<Node score="-0.1435993369319941">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-77.0841"/>
+										</Node>
+										<Node score="0.23336646777387646">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-77.0841"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.43110951631068384">
+									<SimplePredicate field="month" operator="greaterThan" value="11"/>
+									<Node score="-0.6914343378046892">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-85.2649"/>
+										<Node score="-0.550054162039387">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-124.6167"/>
+										</Node>
+										<Node score="-1.336661975758246">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-124.6167"/>
+										</Node>
+									</Node>
+									<Node score="-0.33220838230870253">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-85.2649"/>
+										<Node score="0.09315861607419038">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="6.21"/>
+										</Node>
+										<Node score="-0.3773306107405263">
+											<SimplePredicate field="longitude" operator="greaterThan" value="6.21"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.006680853196700082">
+								<SimplePredicate field="year" operator="greaterThan" value="1988"/>
+								<Node score="0.05787426397294454">
+									<SimplePredicate field="month" operator="lessOrEqual" value="8"/>
+									<Node score="0.020294366331901088">
+										<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+										<Node score="0.12122064607050438">
+											<SimplePredicate field="month" operator="lessOrEqual" value="4"/>
+										</Node>
+										<Node score="-0.18255261322438643">
+											<SimplePredicate field="month" operator="greaterThan" value="4"/>
+										</Node>
+									</Node>
+									<Node score="0.171970563484449">
+										<SimplePredicate field="month" operator="greaterThan" value="6"/>
+										<Node score="0.32888924799072594">
+											<SimplePredicate field="month" operator="lessOrEqual" value="7"/>
+										</Node>
+										<Node score="0.014675543512322099">
+											<SimplePredicate field="month" operator="greaterThan" value="7"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.13755854483078464">
+									<SimplePredicate field="month" operator="greaterThan" value="8"/>
+									<Node score="-0.2947301938766051">
+										<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										<Node score="-0.2577542831180031">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="76.433"/>
+										</Node>
+										<Node score="-0.6553763997564177">
+											<SimplePredicate field="longitude" operator="greaterThan" value="76.433"/>
+										</Node>
+									</Node>
+									<Node score="0.02233046100559077">
+										<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										<Node score="0.23212313819160643">
+											<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										</Node>
+										<Node score="-0.19289186749007461">
+											<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+			<Segment id="20">
+				<True/>
+				<TreeModel functionName="regression" splitCharacteristic="binarySplit">
+					<MiningSchema>
+						<MiningField name="latitude"/>
+						<MiningField name="longitude"/>
+						<MiningField name="year"/>
+						<MiningField name="month"/>
+					</MiningSchema>
+					<Node score="1.0611189947868153E-16">
+						<True/>
+						<Node score="-0.004020525862888753">
+							<SimplePredicate field="year" operator="lessOrEqual" value="2014"/>
+							<Node score="0.008179562602891753">
+								<SimplePredicate field="latitude" operator="lessOrEqual" value="48.0802"/>
+								<Node score="0.02578686880255513">
+									<SimplePredicate field="month" operator="lessOrEqual" value="9"/>
+									<Node score="-0.008637128529089181">
+										<SimplePredicate field="month" operator="lessOrEqual" value="6"/>
+										<Node score="0.04272330514782647">
+											<SimplePredicate field="month" operator="lessOrEqual" value="2"/>
+										</Node>
+										<Node score="-0.03405144164886168">
+											<SimplePredicate field="month" operator="greaterThan" value="2"/>
+										</Node>
+									</Node>
+									<Node score="0.09406140992256665">
+										<SimplePredicate field="month" operator="greaterThan" value="6"/>
+										<Node score="0.16290287788765317">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-85.39361"/>
+										</Node>
+										<Node score="-0.0018664099318333534">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-85.39361"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="-0.04498751943425702">
+									<SimplePredicate field="month" operator="greaterThan" value="9"/>
+									<Node score="0.2338348487683254">
+										<SimplePredicate field="latitude" operator="lessOrEqual" value="19.233"/>
+										<Node score="0.4952613837963733">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.10301193083543048">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+									<Node score="-0.0713688052342119">
+										<SimplePredicate field="latitude" operator="greaterThan" value="19.233"/>
+										<Node score="-0.22057825502933015">
+											<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										</Node>
+										<Node score="0.003898376026235554">
+											<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="-0.04813996479076346">
+								<SimplePredicate field="latitude" operator="greaterThan" value="48.0802"/>
+								<Node score="-0.10404163669054872">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="3.5956"/>
+									<Node score="0.03104090810346935">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-117.86667"/>
+										<Node score="-0.021575256462387005">
+											<SimplePredicate field="month" operator="lessOrEqual" value="9"/>
+										</Node>
+										<Node score="0.19090360419859514">
+											<SimplePredicate field="month" operator="greaterThan" value="9"/>
+										</Node>
+									</Node>
+									<Node score="-0.1878889124352854">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-117.86667"/>
+										<Node score="-0.1596299796940525">
+											<SimplePredicate field="month" operator="lessOrEqual" value="11"/>
+										</Node>
+										<Node score="-0.5171907079764314">
+											<SimplePredicate field="month" operator="greaterThan" value="11"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.02945138790085578">
+									<SimplePredicate field="longitude" operator="greaterThan" value="3.5956"/>
+									<Node score="0.10363726632122071">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="65.05"/>
+										<Node score="0.28387082562541793">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="54.65"/>
+										</Node>
+										<Node score="0.03685462887292788">
+											<SimplePredicate field="latitude" operator="greaterThan" value="54.65"/>
+										</Node>
+									</Node>
+									<Node score="-0.1665635834849808">
+										<SimplePredicate field="longitude" operator="greaterThan" value="65.05"/>
+										<Node score="-0.8305648664332481">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="50.1833"/>
+										</Node>
+										<Node score="-0.10965618999919131">
+											<SimplePredicate field="latitude" operator="greaterThan" value="50.1833"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="0.1432762314617658">
+							<SimplePredicate field="year" operator="greaterThan" value="2014"/>
+							<Node score="0.2202284821042919">
+								<SimplePredicate field="month" operator="lessOrEqual" value="3"/>
+								<Node score="0.07615295923027389">
+									<SimplePredicate field="month" operator="lessOrEqual" value="1"/>
+									<Node score="0.5969899753614314">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-124.9333"/>
+										<Node score="0.06706557603740598">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="50.1833"/>
+										</Node>
+										<Node score="0.7108062502901381">
+											<SimplePredicate field="latitude" operator="greaterThan" value="50.1833"/>
+										</Node>
+									</Node>
+									<Node score="0.054244115040531886">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-124.9333"/>
+										<Node score="0.006577464569861716">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-77.683333"/>
+										</Node>
+										<Node score="0.19482926443462645">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-77.683333"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.29167794626721427">
+									<SimplePredicate field="month" operator="greaterThan" value="1"/>
+									<Node score="0.4100439767177541">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-94.215"/>
+										<Node score="0.25356593694196544">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="36.73333"/>
+										</Node>
+										<Node score="0.4554737031228636">
+											<SimplePredicate field="latitude" operator="greaterThan" value="36.73333"/>
+										</Node>
+									</Node>
+									<Node score="0.16686455998859806">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-94.215"/>
+										<Node score="0.09114114940794799">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="50.1833"/>
+										</Node>
+										<Node score="0.6553031397677627">
+											<SimplePredicate field="latitude" operator="greaterThan" value="50.1833"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="0.10831938886754283">
+								<SimplePredicate field="month" operator="greaterThan" value="3"/>
+								<Node score="-0.0294082475996916">
+									<SimplePredicate field="longitude" operator="lessOrEqual" value="-105.3847"/>
+									<Node score="0.08438605260347216">
+										<SimplePredicate field="longitude" operator="lessOrEqual" value="-112.4819"/>
+										<Node score="0.2446674336490851">
+											<SimplePredicate field="longitude" operator="lessOrEqual" value="-122.15"/>
+										</Node>
+										<Node score="0.006111283113900915">
+											<SimplePredicate field="longitude" operator="greaterThan" value="-122.15"/>
+										</Node>
+									</Node>
+									<Node score="-0.24095843097880998">
+										<SimplePredicate field="longitude" operator="greaterThan" value="-112.4819"/>
+										<Node score="-0.35511291650518073">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="44.79"/>
+										</Node>
+										<Node score="0.1085961429143334">
+											<SimplePredicate field="latitude" operator="greaterThan" value="44.79"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="0.18780910994265715">
+									<SimplePredicate field="longitude" operator="greaterThan" value="-105.3847"/>
+									<Node score="0.14165502233628685">
+										<SimplePredicate field="month" operator="lessOrEqual" value="10"/>
+										<Node score="0.16490451085976526">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="50.1833"/>
+										</Node>
+										<Node score="-0.05068241600655933">
+											<SimplePredicate field="latitude" operator="greaterThan" value="50.1833"/>
+										</Node>
+									</Node>
+									<Node score="0.3741683521125975">
+										<SimplePredicate field="month" operator="greaterThan" value="10"/>
+										<Node score="0.3364266816801069">
+											<SimplePredicate field="latitude" operator="lessOrEqual" value="50.1833"/>
+										</Node>
+										<Node score="0.6933993985384318">
+											<SimplePredicate field="latitude" operator="greaterThan" value="50.1833"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</TreeModel>
+			</Segment>
+		</Segmentation>
+	</MiningModel>
+</PMML>

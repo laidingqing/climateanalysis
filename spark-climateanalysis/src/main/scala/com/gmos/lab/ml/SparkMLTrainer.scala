@@ -50,12 +50,26 @@ object SparkMLTrainer {
     rf.execute()
     */
 
-    // Random Forest Regression Using ML Pipeline
+    /* Random Forest Regression Using ML Pipeline
     val rdd = MLUtils.loadGmosParquetAsDF(sqlContext, "/root/gmos/etl/gmos_enrich.parquet")
     rdd.cache()
     val rfpl = new RandomForestPL(sqlContext, rdd, rdd)
     rfpl.execute()
+    */
 
+    // GBT Regression
+    val rdd:RDD[LabeledPoint] = MLUtils.loadGmosParquetAsRDD(sqlContext, "/root/gmos/etl/gmos_enrich.parquet")
+    rdd.cache()
+    val gbt = new GradientBoostedTrees(sc, rdd, rdd)
+    gbt.execute()
+
+
+    /* GBT Regression Using ML Pipeline
+     val rdd = MLUtils.loadGmosParquetAsDF(sqlContext, "/root/gmos/etl/gmos_enrich.parquet")
+     rdd.cache()
+     val gbtpl = new GradientBoostedTreesPL(sqlContext, rdd, rdd)
+     gbtpl.execute()
+    */
 
   }
 
