@@ -70,7 +70,7 @@ rch Ar](https://github.com/binjiangca/climateanalysis/blob/master/spark-climatea
 ![Oozie Workflow Overview](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/5.png)
 
 
-## REST APIs Architecture
+## REST APIs/Machine Learning Model Serving Architecture
 
 ![REST APIs Architecture](https://github.com/binjiangca/climateanalysis/blob/master/spark-climateanalysis/doc/img/6.png)
 
